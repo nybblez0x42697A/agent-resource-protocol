@@ -1,0 +1,36 @@
+{
+  "operation": "TransitionLifecycleState",
+  "requestId": "req-1002",
+  "result": {
+    "resourceId": "weather.lookup",
+    "versionId": "v3",
+    "fromState": "draft",
+    "toState": "active",
+    "effectiveRegistrationRecord": {
+      "resourceId": "weather.lookup",
+      "versionId": "v3",
+      "resourceKind": "tool",
+      "status": "active",
+      "implementationRef": {
+        "kind": "artifact",
+        "uri": "oci://registry.example/tools/weather.lookup:v3"
+      },
+      "interfaceRef": {
+        "kind": "contract",
+        "name": "weather-lookup-tool",
+        "version": "1.0.0"
+      },
+      "config": {
+        "timeoutMs": 2000
+      },
+      "stateDigest": "sha256:3333333333333333333333333333333333333333333333333333333333333333",
+      "metadata": {
+        "displayName": "Weather Lookup",
+        "owner": "platform-runtime"
+      },
+      "lineageRef": "lineage.tool.weather.lookup.v3",
+      "auditRef": "commit.tool.weather.lookup.v3",
+      "extensions": {}
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "operation": "TransitionLifecycleState",
+  "requestId": "req-1102",
+  "error": {
+    "category": "policy_denied",
+    "message": "activation requires an approval evidence reference from a designated reviewer",
+    "details": {
+      "actor": "user://ops.reviewer",
+      "resourceId": "weather.lookup",
+      "versionId": "v3",
+      "fromState": "draft",
+      "toState": "active",
+      "missingRequirement": "approval://change-review/*"
+    },
+    "retryable": true
+  }
+}

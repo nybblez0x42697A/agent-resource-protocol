@@ -1,0 +1,16 @@
+{
+  "profileId": "profile.reviewed-activation",
+  "baseConformance": "baseline",
+  "requiredExtensions": [],
+  "additionalRequirements": [
+    "TransitionLifecycleState to active requires at least one approval evidence reference",
+    "RestoreResourceVersion requires a non-empty rationale"
+  ],
+  "forbiddenBehaviors": [
+    "Activating a version without policy evaluation",
+    "Returning success for activation when approval evidence is missing"
+  ],
+  "compatibility": {
+    "baselinePreserved": true
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "extensionId": "ext.runtime-region-hint",
+  "surface": "registration-record.extensions",
+  "adds": {
+    "fields": [
+      "runtimeRegionHint"
+    ]
+  },
+  "compatibility": {
+    "baselinePreserved": true,
+    "fallbackBehavior": "ignore_explicitly"
+  },
+  "notes": "Adds an optional scheduling hint without changing identity, lifecycle, or control-plane semantics."
+}

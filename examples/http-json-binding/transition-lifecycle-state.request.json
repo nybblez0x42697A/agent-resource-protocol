@@ -1,0 +1,12 @@
+{
+  "operation": "TransitionLifecycleState",
+  "requestId": "req-1002",
+  "actor": "user://ops.reviewer",
+  "expectedVersionId": "v3",
+  "fromState": "draft",
+  "toState": "active",
+  "rationale": "Validation and policy review passed",
+  "evidenceRefs": [
+    "https://evidence.example/reviews/weather.lookup/v3"
+  ]
+}

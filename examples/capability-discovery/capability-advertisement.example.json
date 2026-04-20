@@ -1,0 +1,32 @@
+{
+  "implementationId": "service.registry.primary",
+  "conformance": "baseline",
+  "bindings": [
+    "binding.http-json.v1"
+  ],
+  "profiles": [
+    "profile.reviewed-activation"
+  ],
+  "extensions": [
+    "ext.runtime-region-hint"
+  ],
+  "operations": [
+    "RegisterResourceVersion",
+    "GetRegistrationRecord",
+    "ListResourceVersions",
+    "TransitionLifecycleState",
+    "RestoreResourceVersion",
+    "GetLineage",
+    "GetAuditRecord"
+  ],
+  "resourceKinds": [
+    "prompt",
+    "agent",
+    "tool",
+    "environment",
+    "memory"
+  ],
+  "notes": {
+    "policyMode": "reviewed-activation"
+  }
+}

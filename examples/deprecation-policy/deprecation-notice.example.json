@@ -1,0 +1,9 @@
+{
+  "artifactClass": "binding",
+  "identifier": "binding.http-json.v1",
+  "retirementState": "deprecated",
+  "effectiveDate": "2026-06-01",
+  "plannedSunsetDate": "2027-01-01",
+  "replacement": "binding.http-json.v2",
+  "compatibilityNotes": "Existing integrations may continue to use v1 until sunset, but new integrations should adopt v2."
+}

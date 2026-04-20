@@ -1,0 +1,45 @@
+{
+  "operation": "RegisterResourceVersion",
+  "requestId": "req-1001",
+  "result": {
+    "resourceId": "weather.lookup",
+    "versionId": "v3",
+    "registrationRecord": {
+      "resourceId": "weather.lookup",
+      "versionId": "v3",
+      "resourceKind": "tool",
+      "status": "active",
+      "implementationRef": {
+        "kind": "artifact",
+        "uri": "oci://registry.example/tools/weather.lookup:v3"
+      },
+      "interfaceRef": {
+        "kind": "contract",
+        "name": "weather-lookup-tool",
+        "version": "1.0.0"
+      },
+      "config": {
+        "timeoutMs": 2000
+      },
+      "stateDigest": "sha256:3333333333333333333333333333333333333333333333333333333333333333",
+      "metadata": {
+        "displayName": "Weather Lookup",
+        "owner": "platform-runtime"
+      },
+      "lineageRef": "lineage.tool.weather.lookup.v3",
+      "auditRef": "commit.tool.weather.lookup.v3",
+      "extensions": {}
+    },
+    "lineageNode": {
+      "resourceId": "weather.lookup",
+      "versionId": "v3",
+      "parentVersionId": "v2",
+      "mutationType": "update",
+      "commitId": "commit.tool.weather.lookup.v3",
+      "createdAt": "2026-04-20T09:10:00Z",
+      "changeSummary": "Published updated timeout policy and active registration",
+      "restoredFromVersionId": null,
+      "supersedesVersionId": "v2"
+    }
+  }
+}

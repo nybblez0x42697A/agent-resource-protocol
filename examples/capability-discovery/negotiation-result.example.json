@@ -1,0 +1,14 @@
+{
+  "outcome": "compatible_with_fallback",
+  "selectedBinding": "binding.http-json.v1",
+  "selectedProfiles": [],
+  "selectedExtensions": [
+    "ext.runtime-region-hint"
+  ],
+  "droppedOptionalCapabilities": [
+    "profile.reviewed-activation"
+  ],
+  "notes": {
+    "reason": "caller requested baseline plus optional reviewed activation profile, but proceeded with baseline-safe fallback"
+  }
+}

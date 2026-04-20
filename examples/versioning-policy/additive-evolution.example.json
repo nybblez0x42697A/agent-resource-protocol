@@ -1,0 +1,15 @@
+{
+  "artifactClass": "extension",
+  "identifier": "ext.runtime-region-hint",
+  "fromVersion": "1.1.0",
+  "toVersion": "1.2.0",
+  "compatibilityClass": "additive",
+  "change": {
+    "summary": "Adds an optional fallbackRegionHint field under the extension surface",
+    "requiresNewIdentifier": false
+  },
+  "compatibility": {
+    "baselinePreserved": true,
+    "olderImplementationsMay": "ignore_explicitly"
+  }
+}

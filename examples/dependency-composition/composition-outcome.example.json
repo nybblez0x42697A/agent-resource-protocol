@@ -1,0 +1,14 @@
+{
+  "artifactId": "profile.region-aware-reviewed-activation",
+  "outcome": "compatible_with_fallback",
+  "resolvedDependencies": [
+    "binding.http-json.v2",
+    "profile.reviewed-activation"
+  ],
+  "unresolvedOptionalDependencies": [
+    "ext.runtime-region-hint"
+  ],
+  "notes": {
+    "fallbackBehavior": "Proceed without region hint optimization while preserving reviewed activation semantics"
+  }
+}

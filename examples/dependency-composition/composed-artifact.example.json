@@ -1,0 +1,23 @@
+{
+  "artifactId": "profile.region-aware-reviewed-activation",
+  "dependsOn": [
+    {
+      "type": "requires",
+      "target": "binding.http-json.v2",
+      "required": true,
+      "compatibilityExpectation": "major-compatible"
+    },
+    {
+      "type": "requires",
+      "target": "profile.reviewed-activation",
+      "required": true,
+      "compatibilityExpectation": "exact"
+    },
+    {
+      "type": "prefers",
+      "target": "ext.runtime-region-hint",
+      "required": false,
+      "compatibilityExpectation": "minor-compatible"
+    }
+  ]
+}

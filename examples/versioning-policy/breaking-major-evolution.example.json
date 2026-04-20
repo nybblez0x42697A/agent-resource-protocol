@@ -1,0 +1,15 @@
+{
+  "artifactClass": "binding",
+  "identifier": "binding.http-json.v2",
+  "fromVersion": "1.4.0",
+  "toVersion": "2.0.0",
+  "compatibilityClass": "breaking",
+  "change": {
+    "summary": "Changes the required negotiation envelope shape and therefore requires a new binding identifier",
+    "requiresNewIdentifier": true
+  },
+  "compatibility": {
+    "baselinePreserved": false,
+    "migrationRequired": true
+  }
+}

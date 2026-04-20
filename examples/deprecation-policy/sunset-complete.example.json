@@ -1,0 +1,12 @@
+{
+  "artifactClass": "extension",
+  "identifier": "ext.legacy-routing-hint",
+  "retirementState": "sunset",
+  "effectiveDate": "2027-03-01",
+  "replacement": "ext.runtime-region-hint",
+  "postSunsetBehavior": {
+    "advertised": false,
+    "negotiable": false,
+    "compatibilityException": false
+  }
+}

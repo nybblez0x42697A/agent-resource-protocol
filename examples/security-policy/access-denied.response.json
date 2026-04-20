@@ -1,0 +1,14 @@
+{
+  "operation": "GetAuditRecord",
+  "requestId": "req-1101",
+  "error": {
+    "category": "access_denied",
+    "message": "actor is not permitted to read the requested audit record",
+    "details": {
+      "actor": "user://contractor.temporary",
+      "auditEventId": "audit-7001",
+      "requiredCapability": "audit.read"
+    },
+    "retryable": false
+  }
+}
