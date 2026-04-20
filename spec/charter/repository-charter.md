@@ -54,6 +54,7 @@ The top-level repository structure expresses artifact ownership and must be inte
 - `spec/`: normative protocol text and protocol-area drafts
 - `spec/charter/`: the repository charter and other root protocol-governance documents
 - `spec/decisions/`: decision records that are normative only when they establish or amend mandatory protocol boundaries and are explicitly linked from applicable normative specifications
+- `spec/sepl/`: reserved future protocol area for self-evolution semantics and not part of `AGRP v1` unless a later release explicitly adds normative artifacts from it
 - `models/`: formal models, schemas, and machine-readable artifacts derived from the protocol
 - `docs/`: supporting analysis, decisions, glossary work, and background material that informs but does not define the protocol unless explicitly incorporated
 - `examples/`: illustrative, non-normative examples of payloads, flows, and deployment shapes
@@ -126,6 +127,8 @@ This repository should converge on:
 - registration, lineage, restore, and audit semantics
 - control-plane and deployment specifications layered on top of the core model
 - machine-checkable schemas and example payloads derived from the normative documents
+
+For `AGRP v1`, these expected outputs do not include a standardized self-evolution layer. `SEPL` remains a future protocol area until a later release explicitly adds it to the normative artifact set.
 
 ## Sequencing Discipline
 

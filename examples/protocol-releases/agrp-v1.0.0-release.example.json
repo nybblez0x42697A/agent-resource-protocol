@@ -1,0 +1,16 @@
+{
+  "releaseId": "agrp-v1.0.0",
+  "protocol": "Agent Resource Protocol",
+  "version": "1.0.0",
+  "artifactSet": "AGRP v1",
+  "artifactSetDocument": "spec/charter/agrp-v1-artifact-set.md",
+  "deferredAreas": [
+    "spec/sepl/"
+  ],
+  "conformanceAnchor": "spec/conformance/baseline-conformance.md",
+  "versioningAnchor": "spec/versioning/versioning-and-evolution-policy.md",
+  "notes": [
+    "This is a non-normative example release expression.",
+    "The release is defined by the normative artifact set rather than by repository contents in general."
+  ]
+}

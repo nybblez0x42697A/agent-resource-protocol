@@ -1,0 +1,13 @@
+{
+  "id": "0028-defer-sepl-from-v1",
+  "status": "planned",
+  "type": "feature",
+  "priority": "P1",
+  "created": "2026-04-20T11:12:19Z",
+  "lastActivity": "2026-04-20T11:12:19Z",
+  "testMode": "N/A",
+  "coverageTarget": 0,
+  "feature_id": null,
+  "epic_id": null,
+  "externalLinks": {}
+}
