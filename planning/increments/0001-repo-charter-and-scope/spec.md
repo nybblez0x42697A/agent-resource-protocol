@@ -1,3 +1,8 @@
+---
+increment: 0001-repo-charter-and-scope
+title: Repo Charter and Scope
+---
+
 # Feature: Repo Charter and Scope
 
 ## Overview
@@ -14,6 +19,6 @@ Define the mission, boundaries, non-goals, and neutrality rules for this protoco
 **So that** future work stays neutral and does not collapse into implementation-specific design
 
 **Acceptance Criteria**:
-- [ ] The charter defines mission, audience, and non-goals
-- [ ] The charter defines what is normative versus non-normative in this repo
-- [ ] The charter defines explicit anti-drift rules for implementation-specific terminology
+- [x] **AC-US1-01**: The charter defines mission, audience, and non-goals
+- [x] **AC-US1-02**: The charter defines what is normative versus non-normative in this repo
+- [x] **AC-US1-03**: The charter defines explicit anti-drift rules for implementation-specific terminology

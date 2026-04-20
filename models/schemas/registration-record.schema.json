@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agent-resource-protocol.dev/schemas/registration-record.schema.json",
+  "title": "Registration Record",
+  "type": "object",
+  "properties": {
+    "resourceId": {
+      "$ref": "./common.schema.json#/$defs/identifier"
+    },
+    "versionId": {
+      "$ref": "./common.schema.json#/$defs/identifier"
+    },
+    "resourceKind": {
+      "$ref": "./common.schema.json#/$defs/resourceKind"
+    },
+    "status": {
+      "$ref": "./common.schema.json#/$defs/registrationStatus"
+    },
+    "implementationRef": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "$ref": "./common.schema.json#/$defs/objectMap"
+        }
+      ]
+    },
+    "interfaceRef": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "$ref": "./common.schema.json#/$defs/objectMap"
+        }
+      ]
+    },
+    "config": {
+      "$ref": "./common.schema.json#/$defs/objectMap"
+    },
+    "stateDigest": {
+      "type": "string",
+      "minLength": 1
+    },
+    "metadata": {
+      "$ref": "./common.schema.json#/$defs/objectMap"
+    },
+    "lineageRef": {
+      "$ref": "./common.schema.json#/$defs/identifier"
+    },
+    "auditRef": {
+      "$ref": "./common.schema.json#/$defs/identifier"
+    },
+    "extensions": {
+      "$ref": "./common.schema.json#/$defs/objectMap"
+    }
+  },
+  "required": [
+    "resourceId",
+    "versionId",
+    "resourceKind",
+    "status",
+    "implementationRef",
+    "interfaceRef",
+    "config",
+    "stateDigest",
+    "metadata",
+    "lineageRef",
+    "auditRef"
+  ],
+  "additionalProperties": false
+}

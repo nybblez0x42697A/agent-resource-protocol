@@ -1,0 +1,28 @@
+{
+  "resourceKind": "agent",
+  "resourceId": "agent.customer-support",
+  "versionId": "v3",
+  "implementationRef": {
+    "kind": "artifact",
+    "uri": "oci://registry.example/agents/customer-support:v3"
+  },
+  "interfaceRef": {
+    "kind": "contract",
+    "name": "customer-support-agent",
+    "version": "1.0.0"
+  },
+  "config": {
+    "routingPolicy": "ticket-priority",
+    "maxContextTokens": 32000
+  },
+  "state": {
+    "instructionSetDigest": "sha256:1111111111111111111111111111111111111111111111111111111111111111"
+  },
+  "metadata": {
+    "displayName": "Customer Support Agent",
+    "owner": "support-platform"
+  },
+  "extensions": {
+    "profile": "customer-service"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "resourceId": "agent.customer-support",
+  "expectedVersionId": "v2",
+  "fromState": "active",
+  "toState": "deprecated",
+  "rationale": "Move traffic to v3 after successful rollout",
+  "evidenceRefs": [
+    "trace://rollout/run-822",
+    "approval://change-review/194"
+  ]
+}

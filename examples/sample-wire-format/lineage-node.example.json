@@ -1,0 +1,10 @@
+{
+  "resourceId": "agent.customer-support",
+  "versionId": "v3",
+  "parentVersionId": "v2",
+  "mutationType": "update",
+  "commitId": "commit.agent.customer-support.v3",
+  "createdAt": "2026-04-20T09:00:00Z",
+  "changeSummary": "Updated routing policy and instruction digest",
+  "supersedesVersionId": "v2"
+}

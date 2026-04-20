@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agent-resource-protocol.dev/schemas/audit-record.schema.json",
+  "title": "Audit Record",
+  "type": "object",
+  "properties": {
+    "commitId": {
+      "$ref": "./common.schema.json#/$defs/identifier"
+    },
+    "resourceId": {
+      "$ref": "./common.schema.json#/$defs/identifier"
+    },
+    "versionId": {
+      "$ref": "./common.schema.json#/$defs/identifier"
+    },
+    "action": {
+      "$ref": "./common.schema.json#/$defs/auditAction"
+    },
+    "actor": {
+      "type": "string",
+      "minLength": 1
+    },
+    "rationale": {
+      "type": "string",
+      "minLength": 1
+    },
+    "evidenceRefs": {
+      "$ref": "./common.schema.json#/$defs/stringArray"
+    },
+    "createdAt": {
+      "$ref": "./common.schema.json#/$defs/timestamp"
+    }
+  },
+  "required": [
+    "commitId",
+    "resourceId",
+    "versionId",
+    "action",
+    "actor",
+    "rationale",
+    "evidenceRefs",
+    "createdAt"
+  ],
+  "additionalProperties": false
+}

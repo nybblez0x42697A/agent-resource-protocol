@@ -1,3 +1,8 @@
+---
+increment: 0005-registration-record-and-lineage-model
+title: Registration Record and Lineage Model
+---
+
 # Feature: Registration Record and Lineage Model
 
 ## Overview
@@ -14,6 +19,6 @@ Define versioned registration records, lineage, restore semantics, and rollback-
 **So that** resources can be versioned, traced, restored, and audited safely
 
 **Acceptance Criteria**:
-- [ ] The design defines the registration record fields and version identity rules
-- [ ] The design defines lineage, mutation history, and rollback semantics
-- [ ] The design defines the minimum audit information required for commits and restores
+- [x] **AC-US1-01**: The design defines the registration record fields and version identity rules
+- [x] **AC-US1-02**: The design defines lineage, mutation history, and rollback semantics
+- [x] **AC-US1-03**: The design defines the minimum audit information required for commits and restores

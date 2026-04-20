@@ -1,3 +1,8 @@
+---
+increment: 0003-glossary-and-neutral-terminology
+title: Glossary and Neutral Terminology
+---
+
 # Feature: Glossary and Neutral Terminology
 
 ## Overview
@@ -14,6 +19,6 @@ Define neutral vocabulary for the protocol and map paper-specific terms to stabl
 **So that** the protocol can be discussed without implementation-specific language leaking into the core
 
 **Acceptance Criteria**:
-- [ ] The glossary defines the core protocol terms and their meanings
-- [ ] The glossary maps AGP/AGS paper terms into neutral protocol vocabulary where needed
-- [ ] The glossary identifies reserved implementation-specific terms that should stay outside the core spec
+- [x] **AC-US1-01**: The glossary defines the core protocol terms and their meanings
+- [x] **AC-US1-02**: The glossary maps AGP/AGS paper terms into neutral protocol vocabulary where needed
+- [x] **AC-US1-03**: The glossary identifies reserved implementation-specific terms that should stay outside the core spec

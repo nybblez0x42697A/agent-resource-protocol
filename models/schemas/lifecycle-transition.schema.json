@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agent-resource-protocol.dev/schemas/lifecycle-transition.schema.json",
+  "title": "Lifecycle Transition Request",
+  "type": "object",
+  "properties": {
+    "resourceId": {
+      "$ref": "./common.schema.json#/$defs/identifier"
+    },
+    "expectedVersionId": {
+      "$ref": "./common.schema.json#/$defs/identifier"
+    },
+    "fromState": {
+      "$ref": "./common.schema.json#/$defs/lifecycleState"
+    },
+    "toState": {
+      "$ref": "./common.schema.json#/$defs/lifecycleState"
+    },
+    "rationale": {
+      "type": "string",
+      "minLength": 1
+    },
+    "restoredFromVersionId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1
+    },
+    "evidenceRefs": {
+      "$ref": "./common.schema.json#/$defs/stringArray"
+    }
+  },
+  "required": [
+    "resourceId",
+    "expectedVersionId",
+    "fromState",
+    "toState",
+    "rationale",
+    "evidenceRefs"
+  ],
+  "additionalProperties": false
+}

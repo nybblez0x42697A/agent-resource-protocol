@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agent-resource-protocol.dev/schemas/resource-entity.schema.json",
+  "title": "Resource Entity",
+  "type": "object",
+  "properties": {
+    "resourceKind": {
+      "$ref": "./common.schema.json#/$defs/resourceKind"
+    },
+    "resourceId": {
+      "$ref": "./common.schema.json#/$defs/identifier"
+    },
+    "versionId": {
+      "$ref": "./common.schema.json#/$defs/identifier"
+    },
+    "implementationRef": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "$ref": "./common.schema.json#/$defs/objectMap"
+        }
+      ]
+    },
+    "interfaceRef": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "$ref": "./common.schema.json#/$defs/objectMap"
+        }
+      ]
+    },
+    "config": {
+      "$ref": "./common.schema.json#/$defs/objectMap"
+    },
+    "state": {
+      "$ref": "./common.schema.json#/$defs/objectMap"
+    },
+    "metadata": {
+      "$ref": "./common.schema.json#/$defs/objectMap"
+    },
+    "extensions": {
+      "$ref": "./common.schema.json#/$defs/objectMap"
+    }
+  },
+  "required": [
+    "resourceKind",
+    "resourceId",
+    "versionId",
+    "implementationRef",
+    "interfaceRef",
+    "config",
+    "state",
+    "metadata"
+  ],
+  "additionalProperties": false
+}

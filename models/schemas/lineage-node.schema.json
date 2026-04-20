@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agent-resource-protocol.dev/schemas/lineage-node.schema.json",
+  "title": "Lineage Node",
+  "type": "object",
+  "properties": {
+    "resourceId": {
+      "$ref": "./common.schema.json#/$defs/identifier"
+    },
+    "versionId": {
+      "$ref": "./common.schema.json#/$defs/identifier"
+    },
+    "parentVersionId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1
+    },
+    "mutationType": {
+      "$ref": "./common.schema.json#/$defs/mutationType"
+    },
+    "commitId": {
+      "$ref": "./common.schema.json#/$defs/identifier"
+    },
+    "createdAt": {
+      "$ref": "./common.schema.json#/$defs/timestamp"
+    },
+    "changeSummary": {
+      "type": "string",
+      "minLength": 1
+    },
+    "restoredFromVersionId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1
+    },
+    "supersedesVersionId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1
+    }
+  },
+  "required": [
+    "resourceId",
+    "versionId",
+    "mutationType",
+    "commitId",
+    "createdAt",
+    "changeSummary"
+  ],
+  "additionalProperties": false
+}

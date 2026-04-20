@@ -1,3 +1,8 @@
+---
+increment: 0004-rspl-core-resource-model
+title: RSPL Core Resource Model
+---
+
 # Feature: RSPL Core Resource Model
 
 ## Overview
@@ -14,6 +19,6 @@ Define the initial protocol resource classes, entity tuple, metadata boundaries,
 **So that** heterogeneous agent resources can be registered, inspected, versioned, and evolved consistently
 
 **Acceptance Criteria**:
-- [ ] The resource model defines the starting resource classes and shared entity tuple
-- [ ] The resource model defines which fields are identity, configuration, metadata, or evolvable state
-- [ ] The resource model distinguishes mandatory protocol fields from provisional extensions
+- [x] **AC-US1-01**: The resource model defines the starting resource classes and shared entity tuple
+- [x] **AC-US1-02**: The resource model defines which fields are identity, configuration, metadata, or evolvable state
+- [x] **AC-US1-03**: The resource model distinguishes mandatory protocol fields from provisional extensions
