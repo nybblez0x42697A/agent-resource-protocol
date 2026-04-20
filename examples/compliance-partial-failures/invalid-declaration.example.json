@@ -1,0 +1,8 @@
+{
+  "baselineConformance": "pass",
+  "semanticReadiness": "supported",
+  "declarationValidity": "invalid",
+  "resolutionOutcome": "not_applicable",
+  "evidenceSufficiency": "sufficient",
+  "consumerInterpretation": "The system may satisfy the readiness profile semantically, but it does not have a valid interoperable declaration and must not be presented as interoperably supported."
+}

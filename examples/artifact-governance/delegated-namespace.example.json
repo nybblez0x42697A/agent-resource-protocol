@@ -1,0 +1,7 @@
+{
+  "namespacePrefix": "ext.acme.*",
+  "steward": "Acme Platform Team",
+  "scope": "Acme-managed extension identifiers",
+  "subdelegationPermitted": false,
+  "standardsTrack": false
+}

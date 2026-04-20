@@ -1,0 +1,8 @@
+{
+  "baselineConformance": "pass",
+  "targetProfileId": "readiness.higher-assurance",
+  "semanticReadiness": "supported",
+  "declarationValidity": "valid",
+  "resolutionOutcome": "conflicted",
+  "consumerInterpretation": "Do not advertise a unique current interoperable readiness claim until the conflicting declarations are resolved."
+}

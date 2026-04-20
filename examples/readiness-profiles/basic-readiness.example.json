@@ -1,0 +1,16 @@
+{
+  "profileId": "readiness.basic-ops",
+  "baseConformance": "baseline",
+  "additionalRequirements": [
+    "Expose stable requestId values in protocol-visible responses",
+    "Provide bounded diagnostics with reasonCode and retryable fields",
+    "Document rollout stage for any non-general-availability artifact"
+  ],
+  "evidenceExpectations": [
+    "diagnostic examples",
+    "request correlation examples"
+  ],
+  "forbiddenBehaviors": [
+    "Claiming readiness.basic-ops without baseline conformance"
+  ]
+}

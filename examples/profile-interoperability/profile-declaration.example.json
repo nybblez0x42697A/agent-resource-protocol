@@ -1,0 +1,9 @@
+{
+  "profileId": "readiness.higher-assurance",
+  "stewardId": "agent-resource-protocol",
+  "revision": "2",
+  "supportState": "supported",
+  "status": "active",
+  "supersedes": "readiness.higher-assurance@1",
+  "compatibilityClass": "incompatible"
+}

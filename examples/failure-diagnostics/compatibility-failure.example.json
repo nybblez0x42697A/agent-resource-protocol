@@ -1,0 +1,14 @@
+{
+  "failureClass": "compatibility_failure",
+  "message": "required binding is not supported by the target implementation",
+  "requestId": "req-1701",
+  "operation": "RegisterResourceVersion",
+  "artifactId": "binding.http-json.v2",
+  "reasonCode": "missing_required_capability",
+  "retryable": false,
+  "details": {
+    "requiredCategory": "binding",
+    "requiredIdentifier": "binding.http-json.v2",
+    "fallbackAvailable": false
+  }
+}

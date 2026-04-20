@@ -1,0 +1,11 @@
+{
+  "artifactId": "profile.region-aware-reviewed-activation",
+  "artifactClass": "profile",
+  "rolloutStage": "preview",
+  "effectiveDate": "2026-05-01",
+  "discoveryNotes": {
+    "advertised": true,
+    "baselineRequired": false,
+    "recommendedAudience": "early adopters"
+  }
+}

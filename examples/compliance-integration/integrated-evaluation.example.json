@@ -1,0 +1,14 @@
+{
+  "baselineConformance": "pass",
+  "targetProfileId": "readiness.basic-ops",
+  "semanticReadiness": "supported",
+  "declarationValidity": "valid",
+  "resolutionOutcome": "resolved",
+  "currentDeclaration": {
+    "stewardId": "agent-resource-protocol",
+    "profileId": "readiness.basic-ops",
+    "revision": "1",
+    "supportState": "supported",
+    "status": "active"
+  }
+}

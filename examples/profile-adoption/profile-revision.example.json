@@ -1,0 +1,11 @@
+{
+  "profileId": "readiness.higher-assurance",
+  "revision": "2",
+  "supersedes": "readiness.higher-assurance@1",
+  "compatibilityClass": "incompatible",
+  "status": "active",
+  "changeSummary": [
+    "Adds support-reference evidence for bounded internal failures as a mandatory requirement",
+    "Clarifies that deprecation communication expectations apply to all published artifact identifiers"
+  ]
+}

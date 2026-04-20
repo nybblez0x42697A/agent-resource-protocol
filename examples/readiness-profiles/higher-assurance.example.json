@@ -1,0 +1,18 @@
+{
+  "profileId": "readiness.higher-assurance",
+  "baseConformance": "baseline",
+  "additionalRequirements": [
+    "Satisfy readiness.basic-ops requirements",
+    "Provide support references for bounded internal failures",
+    "Publish deprecation notices before sunset whenever practical",
+    "Document namespace stewardship for externally visible custom identifiers"
+  ],
+  "evidenceExpectations": [
+    "support reference examples",
+    "deprecation notice examples",
+    "governance examples"
+  ],
+  "forbiddenBehaviors": [
+    "Treating non-support of readiness.higher-assurance as baseline non-conformance"
+  ]
+}

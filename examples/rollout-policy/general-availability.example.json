@@ -1,0 +1,11 @@
+{
+  "artifactId": "binding.http-json.v2",
+  "artifactClass": "binding",
+  "rolloutStage": "general_availability",
+  "effectiveDate": "2026-11-01",
+  "discoveryNotes": {
+    "advertised": true,
+    "baselineRequired": false,
+    "stableForGeneralUse": true
+  }
+}

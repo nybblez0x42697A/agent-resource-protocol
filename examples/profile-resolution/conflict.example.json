@@ -1,0 +1,18 @@
+{
+  "stewardId": "agent-resource-protocol",
+  "profileId": "readiness.higher-assurance",
+  "resolutionOutcome": "conflicted",
+  "declarations": [
+    {
+      "revision": "2",
+      "supportState": "supported",
+      "status": "active"
+    },
+    {
+      "revision": "3",
+      "supportState": "supported",
+      "status": "active"
+    }
+  ],
+  "diagnostic": "Multiple simultaneously current declarations exist and no valid supersession chain selects a unique current declaration."
+}

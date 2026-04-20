@@ -1,0 +1,12 @@
+{
+  "failureClass": "internal_failure",
+  "message": "request could not be completed due to an internal execution fault",
+  "requestId": "req-1702",
+  "operation": "GetLineage",
+  "artifactId": "agent.customer-support",
+  "reasonCode": "internal_storage_unavailable",
+  "retryable": true,
+  "details": {
+    "supportRef": "support://incident/INC-2048"
+  }
+}

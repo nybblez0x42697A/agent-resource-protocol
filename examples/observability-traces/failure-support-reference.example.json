@@ -1,0 +1,12 @@
+{
+  "requestId": "req-1802",
+  "operation": "GetLineage",
+  "resourceId": "agent.customer-support",
+  "failureClass": "internal_failure",
+  "reasonCode": "internal_storage_unavailable",
+  "supportRef": "support://incident/INC-2048",
+  "correlates": {
+    "diagnostic": "diag-1802",
+    "supportLookup": "support://incident/INC-2048"
+  }
+}

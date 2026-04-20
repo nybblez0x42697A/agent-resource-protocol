@@ -1,0 +1,8 @@
+{
+  "identifier": "binding.http-json.v2",
+  "artifactClass": "binding",
+  "namespace": "binding",
+  "status": "reserved",
+  "steward": "agent-resource-protocol",
+  "notes": "Reserved for the standards-track HTTP JSON binding version 2."
+}

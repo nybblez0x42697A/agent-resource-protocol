@@ -1,0 +1,11 @@
+{
+  "requestId": "req-1801",
+  "operation": "RegisterResourceVersion",
+  "resourceId": "weather.lookup",
+  "versionId": "v5",
+  "commitId": "commit.tool.weather.lookup.v5",
+  "correlates": {
+    "auditRecord": "commit.tool.weather.lookup.v5",
+    "lineageNode": "lineage.tool.weather.lookup.v5"
+  }
+}

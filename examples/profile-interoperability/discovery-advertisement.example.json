@@ -1,0 +1,28 @@
+{
+  "readinessProfiles": [
+    {
+      "profileId": "readiness.basic-ops",
+      "stewardId": "agent-resource-protocol",
+      "revision": "1",
+      "supportState": "supported",
+      "status": "active"
+    },
+    {
+      "profileId": "readiness.higher-assurance",
+      "stewardId": "agent-resource-protocol",
+      "revision": "2",
+      "supportState": "adopting",
+      "status": "active",
+      "unsatisfiedMandatoryRequirements": [
+        "Published governance examples for delegated namespace stewardship"
+      ]
+    },
+    {
+      "profileId": "org.example.readiness.partner-grade",
+      "stewardId": "org.example",
+      "revision": "1",
+      "supportState": "planned",
+      "status": "active"
+    }
+  ]
+}

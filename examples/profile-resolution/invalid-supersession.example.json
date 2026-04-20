@@ -1,0 +1,20 @@
+{
+  "stewardId": "agent-resource-protocol",
+  "profileId": "readiness.basic-ops",
+  "resolutionOutcome": "unresolved",
+  "declarations": [
+    {
+      "revision": "1",
+      "supportState": "replaced",
+      "status": "deprecated",
+      "supersedes": "readiness.basic-ops@2"
+    },
+    {
+      "revision": "2",
+      "supportState": "supported",
+      "status": "active",
+      "supersedes": "readiness.basic-ops@1"
+    }
+  ],
+  "diagnostic": "The supersession chain is circular, so neither declaration can be selected as uniquely current."
+}

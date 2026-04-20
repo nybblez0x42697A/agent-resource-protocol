@@ -1,0 +1,16 @@
+{
+  "targetProfileId": "readiness.higher-assurance",
+  "targetRevision": "2",
+  "adoptionStatus": "in_progress",
+  "satisfiedRequirements": [
+    "Stable request correlation for all baseline control-plane operations",
+    "Support references emitted for bounded internal failures"
+  ],
+  "unsatisfiedRequirements": [
+    "Documented sunset notices before artifact retirement when practical",
+    "Published governance examples for delegated namespace stewardship"
+  ],
+  "forbiddenClaims": [
+    "Do not advertise readiness.higher-assurance as fully supported until all mandatory requirements are met"
+  ]
+}
