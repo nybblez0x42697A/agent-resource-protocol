@@ -1,0 +1,18 @@
+{
+  "evidenceId": "evidence:readiness:ops-assured:2025-02-01",
+  "subject": {
+    "profileId": "org.example/readiness/higher-assurance",
+    "revision": "3"
+  },
+  "evidenceType": "test-result",
+  "attestationStatus": "externally_attested",
+  "attestorId": "assessor.example/conformance-lab",
+  "observedAt": "2025-02-01T11:00:00Z",
+  "attestedAt": "2025-02-03T08:30:00Z",
+  "validUntil": "2025-12-31T23:59:59Z",
+  "freshnessState": "expired",
+  "notes": [
+    "The evidence once supported the claim but is past its explicit validity bound.",
+    "Consumers should not treat it as presently sufficient without an overriding local policy."
+  ]
+}

@@ -22,3 +22,7 @@ Non-normative examples belong here.
 - `profile-resolution/`: illustrative declaration conflicts and invalid supersession-chain outcomes
 - `compliance-integration/`: illustrative integrated compliance evaluation and precedence outcomes
 - `compliance-partial-failures/`: illustrative mixed compliance outcomes with invalid declarations or incomplete evidence
+- `conformance-vectors/`: illustrative positive and negative conformance fixtures with expected outcomes
+- `protocol-releases/`: illustrative manifests for protocol release artifact sets
+- `deployment-topologies/`: illustrative colocated and split deployment shapes that preserve the same AGRP semantics
+- `evidence-attestations/`: illustrative current, stale, and expired evidence descriptions for compliance-sensitive claims

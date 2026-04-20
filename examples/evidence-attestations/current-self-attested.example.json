@@ -1,0 +1,18 @@
+{
+  "evidenceId": "evidence:readiness:ops-basic:2026-04-15",
+  "subject": {
+    "profileId": "org.example/readiness/basic-ops",
+    "revision": "2"
+  },
+  "evidenceType": "diagnostic-sample",
+  "attestationStatus": "self_attested",
+  "attestorId": "org.example/platform-team",
+  "observedAt": "2026-04-15T10:30:00Z",
+  "attestedAt": "2026-04-16T09:00:00Z",
+  "validUntil": "2026-05-01T00:00:00Z",
+  "freshnessState": "current",
+  "notes": [
+    "The evidence is recent enough for the local profile expectation window.",
+    "The evidence is self-attested rather than externally attested."
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "evidenceId": "evidence:readiness:ops-assured:2025-11-10",
+  "subject": {
+    "profileId": "org.example/readiness/higher-assurance",
+    "revision": "4"
+  },
+  "evidenceType": "governance-record",
+  "attestationStatus": "externally_attested",
+  "attestorId": "assessor.example/accreditation-team",
+  "observedAt": "2025-11-10T14:00:00Z",
+  "attestedAt": "2025-11-12T18:00:00Z",
+  "validUntil": "2026-06-01T00:00:00Z",
+  "freshnessState": "stale",
+  "notes": [
+    "The evidence remains attested and not yet expired.",
+    "The evaluation context prefers newer evidence, so the evidence is stale rather than current."
+  ]
+}

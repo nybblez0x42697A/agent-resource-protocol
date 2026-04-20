@@ -1,0 +1,39 @@
+{
+  "exampleId": "colocated-authority",
+  "normativeAnchor": "spec/deployment/deployment-topology-and-trust-boundaries.md",
+  "description": "Single deployment unit exposing one protocol endpoint and acting as the resource, policy, and audit authority.",
+  "roles": {
+    "protocolEndpoint": [
+      "registry-api"
+    ],
+    "resourceAuthority": [
+      "registry-api"
+    ],
+    "policyAuthority": [
+      "registry-api"
+    ],
+    "auditTraceAuthority": [
+      "registry-api"
+    ],
+    "externalDependency": []
+  },
+  "trustBoundaries": [
+    {
+      "type": "callerBoundary",
+      "between": [
+        "client",
+        "registry-api"
+      ]
+    }
+  ],
+  "preservedInvariants": [
+    "operationMeaning",
+    "authoritativeOutcome",
+    "accessDeniedVsPolicyDenied",
+    "requestCorrelation"
+  ],
+  "notes": [
+    "This example minimizes infrastructure boundaries but does not change AGRP semantics.",
+    "Internal modules may still exist even though one runtime unit presents the protocol surface."
+  ]
+}

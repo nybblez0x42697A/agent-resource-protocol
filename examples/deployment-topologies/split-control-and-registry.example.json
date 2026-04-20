@@ -1,0 +1,62 @@
+{
+  "exampleId": "split-control-and-registry",
+  "normativeAnchor": "spec/deployment/deployment-topology-and-trust-boundaries.md",
+  "description": "Separate endpoint/controller and registry-authority services, with delegated policy evaluation and shared correlation identifiers.",
+  "roles": {
+    "protocolEndpoint": [
+      "control-plane-gateway"
+    ],
+    "resourceAuthority": [
+      "registry-authority"
+    ],
+    "policyAuthority": [
+      "policy-service"
+    ],
+    "auditTraceAuthority": [
+      "audit-service"
+    ],
+    "externalDependency": [
+      "managed-resource-store"
+    ]
+  },
+  "trustBoundaries": [
+    {
+      "type": "callerBoundary",
+      "between": [
+        "client",
+        "control-plane-gateway"
+      ]
+    },
+    {
+      "type": "internalServiceBoundary",
+      "between": [
+        "control-plane-gateway",
+        "registry-authority"
+      ]
+    },
+    {
+      "type": "delegatedAuthorityBoundary",
+      "between": [
+        "control-plane-gateway",
+        "policy-service"
+      ]
+    },
+    {
+      "type": "externalDependencyBoundary",
+      "between": [
+        "registry-authority",
+        "managed-resource-store"
+      ]
+    }
+  ],
+  "preservedInvariants": [
+    "operationMeaning",
+    "authoritativeOutcome",
+    "correlationContinuity",
+    "boundedDiagnostics"
+  ],
+  "notes": [
+    "The gateway does not invent new lifecycle or denial semantics; it preserves AGRP control-plane behavior across internal hops.",
+    "The example shows one split topology, not a required control-plane product layout."
+  ]
+}
