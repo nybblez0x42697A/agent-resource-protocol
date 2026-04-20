@@ -1,0 +1,22 @@
+{
+  "fixtureId": "capability-advertisement.bad-operation.invalid",
+  "targetSchema": "models/schemas/capability-advertisement.schema.json",
+  "expected": {
+    "outcome": "fail",
+    "failureClass": "validation_failure",
+    "errorCategory": "validation_error"
+  },
+  "payload": {
+    "implementationId": "service.registry.primary",
+    "conformance": "baseline",
+    "bindings": [
+      "binding.http-json.v1"
+    ],
+    "profiles": [],
+    "extensions": [],
+    "operations": [
+      "RegisterResourceVersion",
+      "DeleteEverything"
+    ]
+  }
+}

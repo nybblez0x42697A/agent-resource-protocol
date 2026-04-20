@@ -1,0 +1,202 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agent-resource-protocol.dev/schemas/profile-declaration.schema.json",
+  "title": "Readiness Profile Declaration",
+  "oneOf": [
+    {
+      "$ref": "#/$defs/supportedDeclaration"
+    },
+    {
+      "$ref": "#/$defs/standardDeclaration"
+    },
+    {
+      "$ref": "#/$defs/adoptingDeclaration"
+    }
+  ],
+  "$defs": {
+    "supportedDeclaration": {
+      "type": "object",
+      "properties": {
+        "profileId": {
+          "$ref": "./common.schema.json#/$defs/identifier"
+        },
+        "stewardId": {
+          "$ref": "./common.schema.json#/$defs/identifier"
+        },
+        "revision": {
+          "$ref": "./common.schema.json#/$defs/identifier"
+        },
+        "supportState": {
+          "const": "supported"
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "active",
+            "deprecated",
+            "replaced"
+          ]
+        },
+        "supersedes": {
+          "$ref": "./common.schema.json#/$defs/identifier"
+        },
+        "compatibilityClass": {
+          "type": "string",
+          "enum": [
+            "compatible",
+            "incompatible"
+          ]
+        },
+        "baseConformance": {
+          "type": "string"
+        },
+        "additionalRequirements": {
+          "$ref": "./common.schema.json#/$defs/stringArray"
+        },
+        "evidenceExpectations": {
+          "$ref": "./common.schema.json#/$defs/stringArray"
+        },
+        "forbiddenBehaviors": {
+          "$ref": "./common.schema.json#/$defs/stringArray"
+        }
+      },
+      "required": [
+        "profileId",
+        "stewardId",
+        "revision",
+        "supportState",
+        "status"
+      ],
+      "additionalProperties": false
+    },
+    "standardDeclaration": {
+      "type": "object",
+      "properties": {
+        "profileId": {
+          "$ref": "./common.schema.json#/$defs/identifier"
+        },
+        "stewardId": {
+          "$ref": "./common.schema.json#/$defs/identifier"
+        },
+        "revision": {
+          "$ref": "./common.schema.json#/$defs/identifier"
+        },
+        "supportState": {
+          "type": "string",
+          "enum": [
+            "planned",
+            "deprecated",
+            "replaced"
+          ]
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "active",
+            "deprecated",
+            "replaced"
+          ]
+        },
+        "supersedes": {
+          "$ref": "./common.schema.json#/$defs/identifier"
+        },
+        "compatibilityClass": {
+          "type": "string",
+          "enum": [
+            "compatible",
+            "incompatible"
+          ]
+        },
+        "baseConformance": {
+          "type": "string"
+        },
+        "additionalRequirements": {
+          "$ref": "./common.schema.json#/$defs/stringArray"
+        },
+        "evidenceExpectations": {
+          "$ref": "./common.schema.json#/$defs/stringArray"
+        },
+        "forbiddenBehaviors": {
+          "$ref": "./common.schema.json#/$defs/stringArray"
+        },
+        "unsatisfiedMandatoryRequirements": {
+          "$ref": "./common.schema.json#/$defs/stringArray"
+        }
+      },
+      "required": [
+        "profileId",
+        "stewardId",
+        "revision",
+        "supportState",
+        "status"
+      ],
+      "additionalProperties": false
+    },
+    "adoptingDeclaration": {
+      "type": "object",
+      "properties": {
+        "profileId": {
+          "$ref": "./common.schema.json#/$defs/identifier"
+        },
+        "stewardId": {
+          "$ref": "./common.schema.json#/$defs/identifier"
+        },
+        "revision": {
+          "$ref": "./common.schema.json#/$defs/identifier"
+        },
+        "supportState": {
+          "const": "adopting"
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "active",
+            "deprecated",
+            "replaced"
+          ]
+        },
+        "targetProfileId": {
+          "$ref": "./common.schema.json#/$defs/identifier"
+        },
+        "targetRevision": {
+          "$ref": "./common.schema.json#/$defs/identifier"
+        },
+        "supersedes": {
+          "$ref": "./common.schema.json#/$defs/identifier"
+        },
+        "compatibilityClass": {
+          "type": "string",
+          "enum": [
+            "compatible",
+            "incompatible"
+          ]
+        },
+        "baseConformance": {
+          "type": "string"
+        },
+        "additionalRequirements": {
+          "$ref": "./common.schema.json#/$defs/stringArray"
+        },
+        "evidenceExpectations": {
+          "$ref": "./common.schema.json#/$defs/stringArray"
+        },
+        "forbiddenBehaviors": {
+          "$ref": "./common.schema.json#/$defs/stringArray"
+        },
+        "unsatisfiedMandatoryRequirements": {
+          "$ref": "./common.schema.json#/$defs/stringArray"
+        }
+      },
+      "required": [
+        "profileId",
+        "stewardId",
+        "revision",
+        "supportState",
+        "status",
+        "targetProfileId",
+        "targetRevision"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

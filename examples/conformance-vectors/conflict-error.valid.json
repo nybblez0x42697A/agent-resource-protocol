@@ -1,0 +1,24 @@
+{
+  "fixtureId": "conflict-error.valid",
+  "targetSchema": "models/schemas/control-plane-envelope.schema.json",
+  "expected": {
+    "outcome": "pass",
+    "failureClass": "lifecycle_failure",
+    "errorCategory": "conflict"
+  },
+  "payload": {
+    "operation": "TransitionLifecycleState",
+    "requestId": "req-1002",
+    "error": {
+      "category": "conflict",
+      "message": "expectedVersionId does not match the current selected version",
+      "details": {
+        "resourceId": "weather.lookup",
+        "providedExpectedVersionId": "v3",
+        "currentSelectedVersionId": "v4"
+      },
+      "conflictingVersionId": "v4",
+      "retryable": true
+    }
+  }
+}

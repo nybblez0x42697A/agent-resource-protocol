@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agent-resource-protocol.dev/schemas/capability-advertisement.schema.json",
+  "title": "Capability Advertisement",
+  "type": "object",
+  "properties": {
+    "implementationId": {
+      "$ref": "./common.schema.json#/$defs/identifier"
+    },
+    "conformance": {
+      "type": "string",
+      "enum": [
+        "baseline"
+      ]
+    },
+    "bindings": {
+      "$ref": "./common.schema.json#/$defs/stringArray"
+    },
+    "profiles": {
+      "$ref": "./common.schema.json#/$defs/stringArray"
+    },
+    "extensions": {
+      "$ref": "./common.schema.json#/$defs/stringArray"
+    },
+    "operations": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "RegisterResourceVersion",
+          "GetRegistrationRecord",
+          "ListResourceVersions",
+          "TransitionLifecycleState",
+          "RestoreResourceVersion",
+          "GetLineage",
+          "GetAuditRecord"
+        ]
+      }
+    },
+    "resourceKinds": {
+      "type": "array",
+      "items": {
+        "$ref": "./common.schema.json#/$defs/resourceKind"
+      }
+    },
+    "notes": {
+      "$ref": "./common.schema.json#/$defs/objectMap"
+    }
+  },
+  "required": [
+    "implementationId",
+    "conformance",
+    "bindings",
+    "profiles",
+    "extensions",
+    "operations"
+  ],
+  "additionalProperties": false
+}

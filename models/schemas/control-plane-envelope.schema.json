@@ -1,0 +1,641 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agent-resource-protocol.dev/schemas/control-plane-envelope.schema.json",
+  "title": "Control-Plane Envelope",
+  "oneOf": [
+    {
+      "$ref": "#/$defs/requestEnvelope"
+    },
+    {
+      "$ref": "#/$defs/successResponseEnvelope"
+    },
+    {
+      "$ref": "#/$defs/errorResponseEnvelope"
+    }
+  ],
+  "$defs": {
+    "operationName": {
+      "type": "string",
+      "enum": [
+        "RegisterResourceVersion",
+        "GetRegistrationRecord",
+        "ListResourceVersions",
+        "TransitionLifecycleState",
+        "RestoreResourceVersion",
+        "GetLineage",
+        "GetAuditRecord"
+      ]
+    },
+    "requestBase": {
+      "type": "object",
+      "properties": {
+        "operation": {
+          "$ref": "#/$defs/operationName"
+        },
+        "requestId": {
+          "$ref": "./common.schema.json#/$defs/identifier"
+        },
+        "actor": {
+          "$ref": "./common.schema.json#/$defs/identifier"
+        }
+      },
+      "required": [
+        "operation",
+        "requestId",
+        "actor"
+      ]
+    },
+    "requestEnvelope": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "operation": {
+              "const": "RegisterResourceVersion"
+            },
+            "requestId": {
+              "$ref": "./common.schema.json#/$defs/identifier"
+            },
+            "actor": {
+              "$ref": "./common.schema.json#/$defs/identifier"
+            },
+            "registrationRecord": {
+              "$ref": "./registration-record.schema.json"
+            },
+            "auditRecord": {
+              "$ref": "./audit-record.schema.json"
+            },
+            "expectedVersionId": {
+              "$ref": "./common.schema.json#/$defs/identifier"
+            }
+          },
+          "required": [
+            "operation",
+            "requestId",
+            "actor",
+            "registrationRecord",
+            "auditRecord"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "operation": {
+              "const": "GetRegistrationRecord"
+            },
+            "requestId": {
+              "$ref": "./common.schema.json#/$defs/identifier"
+            },
+            "actor": {
+              "$ref": "./common.schema.json#/$defs/identifier"
+            },
+            "resourceId": {
+              "$ref": "./common.schema.json#/$defs/identifier"
+            },
+            "versionId": {
+              "$ref": "./common.schema.json#/$defs/identifier"
+            }
+          },
+          "required": [
+            "operation",
+            "requestId",
+            "actor",
+            "resourceId",
+            "versionId"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "operation": {
+              "const": "ListResourceVersions"
+            },
+            "requestId": {
+              "$ref": "./common.schema.json#/$defs/identifier"
+            },
+            "actor": {
+              "$ref": "./common.schema.json#/$defs/identifier"
+            },
+            "resourceId": {
+              "$ref": "./common.schema.json#/$defs/identifier"
+            },
+            "statusFilter": {
+              "$ref": "./common.schema.json#/$defs/lifecycleState"
+            }
+          },
+          "required": [
+            "operation",
+            "requestId",
+            "actor",
+            "resourceId"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "operation": {
+              "const": "TransitionLifecycleState"
+            },
+            "requestId": {
+              "$ref": "./common.schema.json#/$defs/identifier"
+            },
+            "actor": {
+              "$ref": "./common.schema.json#/$defs/identifier"
+            },
+            "resourceId": {
+              "$ref": "./common.schema.json#/$defs/identifier"
+            },
+            "versionId": {
+              "$ref": "./common.schema.json#/$defs/identifier"
+            },
+            "expectedVersionId": {
+              "$ref": "./common.schema.json#/$defs/identifier"
+            },
+            "fromState": {
+              "$ref": "./common.schema.json#/$defs/lifecycleState"
+            },
+            "toState": {
+              "$ref": "./common.schema.json#/$defs/lifecycleState"
+            },
+            "rationale": {
+              "type": "string",
+              "minLength": 1
+            },
+            "evidenceRefs": {
+              "$ref": "./common.schema.json#/$defs/stringArray"
+            }
+          },
+          "required": [
+            "operation",
+            "requestId",
+            "actor",
+            "resourceId",
+            "versionId",
+            "expectedVersionId",
+            "fromState",
+            "toState",
+            "rationale"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "operation": {
+              "const": "RestoreResourceVersion"
+            },
+            "requestId": {
+              "$ref": "./common.schema.json#/$defs/identifier"
+            },
+            "actor": {
+              "$ref": "./common.schema.json#/$defs/identifier"
+            },
+            "resourceId": {
+              "$ref": "./common.schema.json#/$defs/identifier"
+            },
+            "restoredFromVersionId": {
+              "$ref": "./common.schema.json#/$defs/identifier"
+            },
+            "expectedVersionId": {
+              "$ref": "./common.schema.json#/$defs/identifier"
+            },
+            "rationale": {
+              "type": "string",
+              "minLength": 1
+            },
+            "evidenceRefs": {
+              "$ref": "./common.schema.json#/$defs/stringArray"
+            }
+          },
+          "required": [
+            "operation",
+            "requestId",
+            "actor",
+            "resourceId",
+            "restoredFromVersionId",
+            "expectedVersionId",
+            "rationale",
+            "evidenceRefs"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "operation": {
+              "const": "GetLineage"
+            },
+            "requestId": {
+              "$ref": "./common.schema.json#/$defs/identifier"
+            },
+            "actor": {
+              "$ref": "./common.schema.json#/$defs/identifier"
+            },
+            "resourceId": {
+              "$ref": "./common.schema.json#/$defs/identifier"
+            },
+            "versionId": {
+              "$ref": "./common.schema.json#/$defs/identifier"
+            }
+          },
+          "required": [
+            "operation",
+            "requestId",
+            "actor",
+            "resourceId"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "oneOf": [
+            {
+              "type": "object",
+              "properties": {
+                "operation": {
+                  "const": "GetAuditRecord"
+                },
+                "requestId": {
+                  "$ref": "./common.schema.json#/$defs/identifier"
+                },
+                "actor": {
+                  "$ref": "./common.schema.json#/$defs/identifier"
+                },
+                "commitId": {
+                  "$ref": "./common.schema.json#/$defs/identifier"
+                }
+              },
+              "required": [
+                "operation",
+                "requestId",
+                "actor",
+                "commitId"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "object",
+              "properties": {
+                "operation": {
+                  "const": "GetAuditRecord"
+                },
+                "requestId": {
+                  "$ref": "./common.schema.json#/$defs/identifier"
+                },
+                "actor": {
+                  "$ref": "./common.schema.json#/$defs/identifier"
+                },
+                "resourceId": {
+                  "$ref": "./common.schema.json#/$defs/identifier"
+                },
+                "versionId": {
+                  "$ref": "./common.schema.json#/$defs/identifier"
+                }
+              },
+              "required": [
+                "operation",
+                "requestId",
+                "actor",
+                "resourceId",
+                "versionId"
+              ],
+              "additionalProperties": false
+            }
+          ]
+        }
+      ]
+    },
+    "successResponseEnvelope": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "operation": {
+              "const": "GetRegistrationRecord"
+            },
+            "requestId": {
+              "$ref": "./common.schema.json#/$defs/identifier"
+            },
+            "result": {
+              "type": "object",
+              "properties": {
+                "registrationRecord": {
+                  "$ref": "./registration-record.schema.json"
+                }
+              },
+              "required": [
+                "registrationRecord"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "operation",
+            "requestId",
+            "result"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "operation": {
+              "const": "ListResourceVersions"
+            },
+            "requestId": {
+              "$ref": "./common.schema.json#/$defs/identifier"
+            },
+            "result": {
+              "type": "object",
+              "properties": {
+                "resourceId": {
+                  "$ref": "./common.schema.json#/$defs/identifier"
+                },
+                "versions": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "./common.schema.json#/$defs/identifier"
+                  }
+                }
+              },
+              "required": [
+                "resourceId",
+                "versions"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "operation",
+            "requestId",
+            "result"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "operation": {
+              "const": "RegisterResourceVersion"
+            },
+            "requestId": {
+              "$ref": "./common.schema.json#/$defs/identifier"
+            },
+            "result": {
+              "type": "object",
+              "properties": {
+                "resourceId": {
+                  "$ref": "./common.schema.json#/$defs/identifier"
+                },
+                "versionId": {
+                  "$ref": "./common.schema.json#/$defs/identifier"
+                },
+                "registrationRecord": {
+                  "$ref": "./registration-record.schema.json"
+                },
+                "lineageNode": {
+                  "$ref": "./lineage-node.schema.json"
+                }
+              },
+              "required": [
+                "resourceId",
+                "versionId",
+                "registrationRecord",
+                "lineageNode"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "operation",
+            "requestId",
+            "result"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "operation": {
+              "const": "RestoreResourceVersion"
+            },
+            "requestId": {
+              "$ref": "./common.schema.json#/$defs/identifier"
+            },
+            "result": {
+              "type": "object",
+              "properties": {
+                "resourceId": {
+                  "$ref": "./common.schema.json#/$defs/identifier"
+                },
+                "versionId": {
+                  "$ref": "./common.schema.json#/$defs/identifier"
+                },
+                "registrationRecord": {
+                  "$ref": "./registration-record.schema.json"
+                },
+                "lineageNode": {
+                  "$ref": "./lineage-node.schema.json"
+                }
+              },
+              "required": [
+                "resourceId",
+                "versionId",
+                "registrationRecord",
+                "lineageNode"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "operation",
+            "requestId",
+            "result"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "operation": {
+              "const": "TransitionLifecycleState"
+            },
+            "requestId": {
+              "$ref": "./common.schema.json#/$defs/identifier"
+            },
+            "result": {
+              "type": "object",
+              "properties": {
+                "resourceId": {
+                  "$ref": "./common.schema.json#/$defs/identifier"
+                },
+                "versionId": {
+                  "$ref": "./common.schema.json#/$defs/identifier"
+                },
+                "fromState": {
+                  "$ref": "./common.schema.json#/$defs/lifecycleState"
+                },
+                "toState": {
+                  "$ref": "./common.schema.json#/$defs/lifecycleState"
+                },
+                "effectiveRegistrationRecord": {
+                  "$ref": "./registration-record.schema.json"
+                }
+              },
+              "required": [
+                "resourceId",
+                "versionId",
+                "fromState",
+                "toState",
+                "effectiveRegistrationRecord"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "operation",
+            "requestId",
+            "result"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "operation": {
+              "const": "GetLineage"
+            },
+            "requestId": {
+              "$ref": "./common.schema.json#/$defs/identifier"
+            },
+            "result": {
+              "type": "object",
+              "properties": {
+                "resourceId": {
+                  "$ref": "./common.schema.json#/$defs/identifier"
+                },
+                "lineage": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "./lineage-node.schema.json"
+                  }
+                }
+              },
+              "required": [
+                "resourceId",
+                "lineage"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "operation",
+            "requestId",
+            "result"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "operation": {
+              "const": "GetAuditRecord"
+            },
+            "requestId": {
+              "$ref": "./common.schema.json#/$defs/identifier"
+            },
+            "result": {
+              "type": "object",
+              "properties": {
+                "auditRecord": {
+                  "$ref": "./audit-record.schema.json"
+                }
+              },
+              "required": [
+                "auditRecord"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "operation",
+            "requestId",
+            "result"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "errorResponseEnvelope": {
+      "type": "object",
+      "properties": {
+        "operation": {
+          "$ref": "#/$defs/operationName"
+        },
+        "requestId": {
+          "$ref": "./common.schema.json#/$defs/identifier"
+        },
+        "error": {
+          "type": "object",
+          "properties": {
+            "code": {
+              "type": "string",
+              "minLength": 1
+            },
+            "category": {
+              "type": "string",
+              "enum": [
+                "validation_error",
+                "not_found",
+                "conflict",
+                "policy_denied",
+                "access_denied",
+                "unsupported_operation",
+                "internal_error"
+              ]
+            },
+            "message": {
+              "type": "string",
+              "minLength": 1
+            },
+            "retryable": {
+              "type": "boolean"
+            },
+            "resourceId": {
+              "$ref": "./common.schema.json#/$defs/identifier"
+            },
+            "versionId": {
+              "$ref": "./common.schema.json#/$defs/identifier"
+            },
+            "expectedVersionId": {
+              "$ref": "./common.schema.json#/$defs/identifier"
+            },
+            "actualVersionId": {
+              "$ref": "./common.schema.json#/$defs/identifier"
+            },
+            "details": {
+              "$ref": "./common.schema.json#/$defs/objectMap"
+            },
+            "conflictingVersionId": {
+              "$ref": "./common.schema.json#/$defs/identifier"
+            }
+          },
+          "required": [
+            "category",
+            "message",
+            "retryable"
+          ],
+          "additionalProperties": true
+        }
+      },
+      "required": [
+        "operation",
+        "requestId",
+        "error"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

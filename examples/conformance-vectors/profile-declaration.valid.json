@@ -1,0 +1,16 @@
+{
+  "fixtureId": "profile-declaration.valid",
+  "targetSchema": "models/schemas/profile-declaration.schema.json",
+  "expected": {
+    "outcome": "pass"
+  },
+  "payload": {
+    "profileId": "readiness.higher-assurance",
+    "stewardId": "agent-resource-protocol",
+    "revision": "2",
+    "supportState": "supported",
+    "status": "active",
+    "supersedes": "readiness.higher-assurance@1",
+    "compatibilityClass": "incompatible"
+  }
+}

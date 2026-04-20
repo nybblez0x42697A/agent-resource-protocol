@@ -2,6 +2,8 @@
   "operation": "TransitionLifecycleState",
   "requestId": "req-1002",
   "actor": "user://ops.reviewer",
+  "resourceId": "weather.lookup",
+  "versionId": "v3",
   "expectedVersionId": "v3",
   "fromState": "draft",
   "toState": "active",
