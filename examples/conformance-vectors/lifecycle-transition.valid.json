@@ -1,0 +1,19 @@
+{
+  "fixtureId": "lifecycle-transition.valid",
+  "targetSchema": "models/schemas/lifecycle-transition.schema.json",
+  "expected": {
+    "outcome": "pass"
+  },
+  "payload": {
+    "resourceId": "weather.lookup",
+    "versionId": "v4",
+    "actor": "user://ops.reviewer",
+    "expectedVersionId": "v3",
+    "fromState": "draft",
+    "toState": "active",
+    "rationale": "Approve v4 after rollout evidence review.",
+    "evidenceRefs": [
+      "evidence://rollout-report/weather.lookup/v4"
+    ]
+  }
+}

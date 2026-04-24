@@ -1,0 +1,19 @@
+{
+  "fixtureId": "audit-record.valid",
+  "targetSchema": "models/schemas/audit-record.schema.json",
+  "expected": {
+    "outcome": "pass"
+  },
+  "payload": {
+    "commitId": "commit.tool.weather.lookup.v4",
+    "resourceId": "weather.lookup",
+    "versionId": "v4",
+    "action": "update",
+    "actor": "service://control-plane/registrar",
+    "rationale": "Adjust default timeout after rollout review",
+    "evidenceRefs": [
+      "evidence://rollout-report/weather.lookup/v4"
+    ],
+    "createdAt": "2026-04-21T10:00:00Z"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "fixtureId": "audit-record.missing-action.invalid",
+  "targetSchema": "models/schemas/audit-record.schema.json",
+  "expected": {
+    "outcome": "fail",
+    "failureClass": "validation_failure",
+    "errorCategory": "validation_error"
+  },
+  "payload": {
+    "commitId": "commit.tool.weather.lookup.v4",
+    "resourceId": "weather.lookup",
+    "versionId": "v4",
+    "actor": "service://control-plane/registrar",
+    "rationale": "Adjust default timeout after rollout review",
+    "evidenceRefs": [
+      "evidence://rollout-report/weather.lookup/v4"
+    ],
+    "createdAt": "2026-04-21T10:00:00Z"
+  }
+}

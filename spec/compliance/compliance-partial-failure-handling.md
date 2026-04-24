@@ -110,7 +110,7 @@ A consumer should not collapse those statuses into a single yes/no claim unless 
 
 ## Overstatement Prohibition
 
-If any higher layer is invalid, unresolved, or insufficiently evidenced, the consumer must not summarize the system as fully and uniquely supported at that higher layer.
+If any higher-layer is invalid, unresolved, or insufficiently evidenced, the consumer must not summarize the system as fully and uniquely supported at that higher-layer.
 
 For example:
 

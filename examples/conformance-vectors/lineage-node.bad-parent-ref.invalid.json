@@ -1,0 +1,18 @@
+{
+  "fixtureId": "lineage-node.bad-parent-ref.invalid",
+  "targetSchema": "models/schemas/lineage-node.schema.json",
+  "expected": {
+    "outcome": "fail",
+    "failureClass": "validation_failure",
+    "errorCategory": "validation_error"
+  },
+  "payload": {
+    "resourceId": "weather.lookup",
+    "versionId": "v4",
+    "parentVersionId": "",
+    "mutationType": "update",
+    "commitId": "commit.tool.weather.lookup.v4",
+    "createdAt": "2026-04-21T10:00:00Z",
+    "changeSummary": "Lowered default timeout from 2000ms to 1500ms after rollout evidence."
+  }
+}

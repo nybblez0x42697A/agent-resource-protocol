@@ -7,6 +7,12 @@
     "resourceId": {
       "$ref": "./common.schema.json#/$defs/identifier"
     },
+    "versionId": {
+      "$ref": "./common.schema.json#/$defs/identifier"
+    },
+    "actor": {
+      "$ref": "./common.schema.json#/$defs/identifier"
+    },
     "expectedVersionId": {
       "$ref": "./common.schema.json#/$defs/identifier"
     },
@@ -33,11 +39,12 @@
   },
   "required": [
     "resourceId",
+    "versionId",
+    "actor",
     "expectedVersionId",
     "fromState",
     "toState",
-    "rationale",
-    "evidenceRefs"
+    "rationale"
   ],
   "additionalProperties": false
 }

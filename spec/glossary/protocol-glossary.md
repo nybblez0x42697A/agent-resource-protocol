@@ -24,6 +24,14 @@ A protocol-level category of resource. Examples may include prompt, agent, tool,
 
 A concrete resource instance that is registered, versioned, and addressable through protocol-defined structures.
 
+### Resource Authority
+
+The deployment-visible accountable party responsible for determining the protocol-visible result of managed resource reads and writes. Resource authority may be centralized or distributed across cooperating components, but the implementation must ensure determinable authority for the outcome of each operation regardless of internal topology.
+
+### Trust Boundary
+
+A protocol-visible edge where authority, attestation, policy, or failure behavior may change, as defined in baseline deployment topology. Trust boundaries include the caller boundary, internal service boundary, delegated authority boundary, and external dependency boundary; crossing any boundary must preserve the invariants specified for that boundary type.
+
 ### Registration Record
 
 The canonical protocol record that describes a managed resource instance, including its identity, version reference, implementation reference, instantiation data, and exported interaction surfaces.
@@ -35,6 +43,10 @@ A protocol-visible description of where the executable or interpretable form of 
 ### Exported Interface
 
 A protocol-visible representation of how other components may inspect, invoke, configure, or reason about a managed resource.
+
+### Capability Advertisement / Capability Negotiation
+
+Capability advertisement is the mechanism by which implementations describe supported operations, bindings, profiles, extensions, and resource kinds before an operation is attempted, as modeled by `capability-advertisement.schema.json`. Capability negotiation is the mutual reconciliation process in which two parties select a compatible set of capabilities from what has been advertised, subject to baseline rules that require baseline conformance to remain preserved and permit fallback only when optional capabilities are dropped.
 
 ### Resource Lifecycle
 
@@ -56,13 +68,29 @@ A protocol-governed operation that returns a managed resource to an earlier appr
 
 The minimum protocol-visible evidence associated with a resource change, evaluation, restore, or commit event.
 
+### Attestation
+
+A protocol-visible statement that an artifact, version, or claim has been witnessed or verified by a named authority. Attestation status is expressed as one of three baseline states — `unattested` (no accountable party identified), `self_attested` (publishing implementation attests), or `externally_attested` (distinct accountable party attests) — as defined in `evidence-freshness-and-attestation.md`.
+
 ### Trace Artifact
 
 An execution-derived record, such as outputs, intermediate observations, or reasoning-related evidence, that may later inform evaluation or change decisions.
 
+### Evidence
+
+A bounded artifact or reference (such as a test result, diagnostic sample, rollout record, or governance record) attached to a protocol action or readiness claim to justify or document it. Evidence is referenced by `evidenceRefs` in audit records and lifecycle-transition payloads and may be stored internally or externally so long as its protocol-visible meaning remains clear when referenced.
+
 ### Core Protocol Layer
 
 The normative layer that defines managed resources, registration records, lifecycle semantics, identity, lineage, and other shared substrate rules that do not depend on a specific optimization or control strategy.
+
+### Control-Plane
+
+The protocol surface defined by the baseline operations (`RegisterResourceVersion`, `GetRegistrationRecord`, `ListResourceVersions`, `TransitionLifecycleState`, `RestoreResourceVersion`, `GetLineage`, `GetAuditRecord`) and their request/response contracts, transport-neutral in design and bound to concrete carriers through adopter-defined bindings such as HTTP.
+
+### Transport Binding
+
+A concrete realization of the protocol's control-plane contracts over a specific carrier such as HTTP, IPC, or message-bus. Transport bindings preserve operation meaning and required contract fields while allowing transport-specific encoding (e.g., HTTP methods, URI patterns, headers); the protocol itself is transport-neutral and adopters define their own bindings to carriers they support.
 
 ### Higher-Layer Protocol
 
@@ -79,6 +107,18 @@ A named stage in a higher-layer change loop, such as observing, selecting, propo
 ### Policy Gate
 
 A protocol-visible approval, validation, or safety boundary that must be satisfied before a change can advance from one operator phase to the next. Examples may include schema validation, policy review, evaluation thresholds, or explicit human approval.
+
+### Readiness Profile
+
+A named stewarded bundle of additional operational expectations such as observability practices, diagnostics quality, rollout discipline, or governance transparency, layered above baseline conformance. Every readiness profile preserves baseline protocol semantics and may declare explicit `baseConformance`, `additionalRequirements`, and `evidenceExpectations` as modeled by `profile-declaration.schema.json`.
+
+### Conformance Claim
+
+A published assertion by an implementation that it satisfies a named conformance baseline (such as `baseline`) and optionally one or more readiness profiles layered above it. A conformance level is the named baseline or stricter profile scope against which such a claim is made. Claims must be demonstrable through semantic alignment with normative artifacts and compatibility with the corresponding schema set.
+
+### Failure Taxonomy / Diagnostic Code
+
+The stable category-plus-code scheme on error envelopes by which protocol-visible failures remain understandable and comparable across layers. The failure taxonomy is the enumerated set of baseline failure classes (`validation_failure`, `compatibility_failure`, `policy_failure`, `access_failure`, `lifecycle_failure`, `composition_failure`, `internal_failure`) as defined in `failure-taxonomy-and-diagnostics.md`; the diagnostic code is a specific stable identifier such as `missing_required_capability` or `policy_evidence_missing` that implementers use for machine-usable failure interpretation without exposing implementation internals.
 
 ### Extension Point
 

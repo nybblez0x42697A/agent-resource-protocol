@@ -1,0 +1,20 @@
+{
+  "fixtureId": "lifecycle-transition.missing-actor.invalid",
+  "targetSchema": "models/schemas/lifecycle-transition.schema.json",
+  "expected": {
+    "outcome": "fail",
+    "failureClass": "validation_failure",
+    "errorCategory": "validation_error"
+  },
+  "payload": {
+    "resourceId": "weather.lookup",
+    "versionId": "v4",
+    "expectedVersionId": "v3",
+    "fromState": "draft",
+    "toState": "active",
+    "rationale": "Approve v4 after rollout evidence review.",
+    "evidenceRefs": [
+      "evidence://rollout-report/weather.lookup/v4"
+    ]
+  }
+}

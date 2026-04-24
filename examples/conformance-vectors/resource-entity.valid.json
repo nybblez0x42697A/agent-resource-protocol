@@ -1,0 +1,29 @@
+{
+  "fixtureId": "resource-entity.valid",
+  "targetSchema": "models/schemas/resource-entity.schema.json",
+  "expected": {
+    "outcome": "pass"
+  },
+  "payload": {
+    "resourceKind": "tool",
+    "resourceId": "weather.lookup",
+    "versionId": "v4",
+    "implementationRef": {
+      "kind": "artifact",
+      "uri": "oci://registry.example/tools/weather.lookup:v4"
+    },
+    "interfaceRef": {
+      "kind": "contract",
+      "name": "weather-lookup-tool",
+      "version": "1.0.0"
+    },
+    "config": {
+      "timeoutMs": 1500
+    },
+    "state": {},
+    "metadata": {
+      "displayName": "Weather Lookup",
+      "owner": "platform-runtime"
+    }
+  }
+}

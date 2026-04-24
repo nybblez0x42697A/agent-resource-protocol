@@ -1,0 +1,33 @@
+{
+  "fixtureId": "registration-record.missing-resource-kind.invalid",
+  "targetSchema": "models/schemas/registration-record.schema.json",
+  "expected": {
+    "outcome": "fail",
+    "failureClass": "validation_failure",
+    "errorCategory": "validation_error"
+  },
+  "payload": {
+    "resourceId": "weather.lookup",
+    "versionId": "v4",
+    "status": "active",
+    "implementationRef": {
+      "kind": "artifact",
+      "uri": "oci://registry.example/tools/weather.lookup:v4"
+    },
+    "interfaceRef": {
+      "kind": "contract",
+      "name": "weather-lookup-tool",
+      "version": "1.0.0"
+    },
+    "config": {
+      "timeoutMs": 1500
+    },
+    "stateDigest": "sha256:4444444444444444444444444444444444444444444444444444444444444444",
+    "metadata": {
+      "displayName": "Weather Lookup",
+      "owner": "platform-runtime"
+    },
+    "lineageRef": "lineage.tool.weather.lookup.v4",
+    "auditRef": "commit.tool.weather.lookup.v4"
+  }
+}

@@ -26,7 +26,7 @@ The mission of this repository is to:
 This repository serves:
 
 - protocol authors defining shared semantics and conformance boundaries
-- implementers building registries, control planes, runtimes, and tooling against the protocol
+- implementers building registries, control-planes, runtimes, and tooling against the protocol
 - reviewers assessing model clarity, versioning semantics, and evolvability guarantees
 - adopters mapping the protocol into concrete systems without rewriting the core standard
 

@@ -79,14 +79,15 @@ Every failed HTTP response body must contain:
 
 The `error` object must contain:
 
+- `code`
 - `category`
 - `message`
+- `retryable`
 
 The `error` object may contain:
 
 - `details`
 - `conflictingVersionId`
-- `retryable`
 
 ## Resource Addressing Model
 

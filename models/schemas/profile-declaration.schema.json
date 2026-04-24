@@ -67,6 +67,17 @@
         "supportState",
         "status"
       ],
+      "allOf": [
+        {
+          "if": {
+            "properties": { "status": { "const": "replaced" } },
+            "required": ["status"]
+          },
+          "then": {
+            "required": ["supersedes"]
+          }
+        }
+      ],
       "additionalProperties": false
     },
     "standardDeclaration": {
@@ -129,6 +140,17 @@
         "revision",
         "supportState",
         "status"
+      ],
+      "allOf": [
+        {
+          "if": {
+            "properties": { "status": { "const": "replaced" } },
+            "required": ["status"]
+          },
+          "then": {
+            "required": ["supersedes"]
+          }
+        }
       ],
       "additionalProperties": false
     },
@@ -195,6 +217,17 @@
         "status",
         "targetProfileId",
         "targetRevision"
+      ],
+      "allOf": [
+        {
+          "if": {
+            "properties": { "status": { "const": "replaced" } },
+            "required": ["status"]
+          },
+          "then": {
+            "required": ["supersedes"]
+          }
+        }
       ],
       "additionalProperties": false
     }

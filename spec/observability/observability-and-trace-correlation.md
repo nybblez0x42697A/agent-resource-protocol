@@ -159,7 +159,7 @@ An implementation should avoid exposing support references or artifact correlati
 A baseline-conformant implementation must:
 
 - preserve `requestId` semantics across protocol-visible request and response handling
-- make successful mutations correlatable to their audit or lineage records
+- make successful mutations correlatable to their audit records or lineage nodes
 - make failures correlatable to diagnostics and support references when those are exposed
 
 It may:

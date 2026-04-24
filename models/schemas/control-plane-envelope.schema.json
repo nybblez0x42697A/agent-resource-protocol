@@ -122,7 +122,8 @@
               "$ref": "./common.schema.json#/$defs/identifier"
             },
             "statusFilter": {
-              "$ref": "./common.schema.json#/$defs/lifecycleState"
+              "$ref": "./common.schema.json#/$defs/registrationStatus",
+              "description": "Optional filter by registration status (the discovery-visible status). Does not include 'draft'; use TransitionLifecycleState for workflow-state concerns."
             }
           },
           "required": [
@@ -623,11 +624,12 @@
             }
           },
           "required": [
+            "code",
             "category",
             "message",
             "retryable"
           ],
-          "additionalProperties": true
+          "additionalProperties": false
         }
       },
       "required": [

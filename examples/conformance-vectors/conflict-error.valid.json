@@ -10,6 +10,7 @@
     "operation": "TransitionLifecycleState",
     "requestId": "req-1002",
     "error": {
+      "code": "lifecycle_expected_version_mismatch",
       "category": "conflict",
       "message": "expectedVersionId does not match the current selected version",
       "details": {

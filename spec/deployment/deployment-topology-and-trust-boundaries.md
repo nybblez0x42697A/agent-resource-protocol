@@ -2,7 +2,7 @@
 
 ## Status
 
-This document defines the baseline deployment topology and trust-boundary model for `AGRP v1`.
+This document defines the baseline deployment topology and trust boundary model for `AGRP v1`.
 
 It builds on:
 
@@ -103,7 +103,7 @@ Examples include:
 
 - external policy engines
 - delegated identity services
-- external stores for managed-resource material
+- external stores for managed resource material
 - upstream service dependencies used to fulfill protocol reads or writes
 
 This role exists to clarify trust and failure boundaries, not to require exposure of internal vendor details.
@@ -129,7 +129,7 @@ Across this boundary, the implementation must preserve:
 
 ### Internal Service Boundary
 
-The internal service boundary separates cooperating components inside one deployment trust domain.
+The internal service boundary separates cooperating components inside one deployment trust boundary.
 
 Crossing this boundary is allowed to change implementation mechanics, but it must not change:
 
@@ -150,7 +150,7 @@ When this boundary is crossed, the implementation must preserve:
 
 ### External Dependency Boundary
 
-The external dependency boundary exists when fulfillment of a request depends on a system that is outside the implementing trust domain or outside the protocol authority path.
+The external dependency boundary exists when fulfillment of a request depends on a system that is outside the implementing trust boundary or outside the protocol authority path.
 
 Failures across this boundary may influence diagnostics or retry behavior, but they must not silently redefine protocol meaning.
 
@@ -160,7 +160,7 @@ This protocol does not require:
 
 - one process per role
 - one database per role
-- one control plane per deployment
+- one control-plane per deployment
 - a centralized registry service for all adopters
 
 The same deployment may:

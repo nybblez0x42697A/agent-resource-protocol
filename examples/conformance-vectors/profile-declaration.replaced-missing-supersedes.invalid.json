@@ -1,0 +1,16 @@
+{
+  "fixtureId": "profile-declaration.replaced-missing-supersedes.invalid",
+  "targetSchema": "models/schemas/profile-declaration.schema.json",
+  "expected": {
+    "outcome": "fail",
+    "failureClass": "validation_failure",
+    "errorCategory": "validation_error"
+  },
+  "payload": {
+    "profileId": "readiness.higher-assurance",
+    "stewardId": "agent-resource-protocol",
+    "revision": "2",
+    "supportState": "supported",
+    "status": "replaced"
+  }
+}

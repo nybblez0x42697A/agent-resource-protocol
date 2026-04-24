@@ -63,10 +63,17 @@ The minimum fields have these meanings:
 - `profileId`: the stable readiness profile identifier
 - `stewardId`: the organization, namespace steward, or other accountable publisher of the declaration
 - `revision`: a monotonic revision token for the declared profile meaning
-- `supportState`: the currently advertised readiness support state
-- `status`: lifecycle standing of the declaration itself, such as active or deprecated
-- `supersedes`: the immediately prior declaration or profile revision being replaced
+- `supportState`: the currently advertised readiness support state (distinct from `status`; `supportState` describes how the profile is positioned — `supported`, `planned`, `deprecated`, `replaced`, or `adopting` — while `status` describes the standing of the declaration artifact itself)
+- `status`: lifecycle standing of the declaration itself — `active`, `deprecated`, or `replaced`. A declaration whose `status` is `replaced` must name its successor through `supersedes`.
+- `supersedes`: the immediately prior declaration or profile revision being replaced; required when `status` is `replaced` and otherwise optional
 - `compatibilityClass`: whether the replacement is compatible or incompatible for claim purposes
+- `baseConformance`: the baseline conformance anchor beneath this readiness layer — the named conformance baseline (for example, `baseline`) that the profile builds on. `baseConformance` is not a synonym for profile support; a declaration may name a baseline it builds on without itself offering `supported` status.
+- `additionalRequirements`: profile-shaping requirements this declaration adds on top of its `baseConformance`. Not every declaration carries additional requirements; the field is optional and describes only what this profile layers.
+- `evidenceExpectations`: profile-shaping evidence references this declaration expects claims to attach. Also optional; its absence does not imply claims need no evidence, only that this declaration does not name specific expectations.
+- `forbiddenBehaviors`: profile-shaping behaviors this declaration explicitly disallows, even where the baseline permits them. Optional; a profile may be positioned purely additively without forbidding anything.
+- `unsatisfiedMandatoryRequirements`: requirements named by the profile that the declaring implementation currently does not satisfy. Permitted on declarations whose `supportState` is anything other than `supported`, and forbidden on declarations whose `supportState` is `supported`, reflecting the schema structure: a `supported` declaration asserts the profile is met, so unsatisfied requirements cannot coexist with that support state. Presence without unsatisfied items carries no additional meaning.
+
+The `unsatisfiedMandatoryRequirements` field is forbidden on declarations whose `supportState` is `supported`, permitted but not required on declarations whose `supportState` is `planned`, `deprecated`, or `replaced`, and expected on declarations whose `supportState` is `adopting` when mandatory requirements remain unsatisfied. Its presence alone does not invalidate a declaration; a `supported` declaration that includes it is invalid because the support state and the existence of unsatisfied mandatory requirements contradict one another.
 
 These fields may be expressed in any wire representation so long as their semantics remain clear.
 

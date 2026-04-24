@@ -7,7 +7,7 @@ This document defines the initial RSPL core resource model.
 It is normative for:
 
 - the starting resource classes
-- the shared resource entity tuple
+- the shared resource tuple
 - field-boundary categories used by later registration, lifecycle, and lineage specifications
 
 ## Scope
@@ -153,7 +153,7 @@ The precise mutability rules for each of these fields are deferred to later life
 
 ## Mandatory Core Fields
 
-The following fields are mandatory in every RSPL resource entity:
+The following fields are mandatory in every RSPL resource:
 
 - `resourceKind`
 - `resourceId`

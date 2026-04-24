@@ -40,7 +40,7 @@ It must also be able to process the corresponding machine-readable schema artifa
 
 A baseline-conformant implementation must:
 
-1. represent managed resources according to the shared resource entity semantics
+1. represent managed resources according to the shared resource semantics
 2. support the baseline resource kinds or reject unsupported kinds explicitly without redefining them
 3. preserve resource and version identity rules
 4. preserve append-only lineage semantics

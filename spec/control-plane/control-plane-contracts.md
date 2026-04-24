@@ -146,6 +146,8 @@ Optional request fields:
 
 - `statusFilter`
 
+`statusFilter`, when present, matches against `registrationStatus` values; `draft` versions are not discoverable through this operation. Workflow-state concerns (including `draft`) are handled through `TransitionLifecycleState`.
+
 Success result fields:
 
 - `resourceId`

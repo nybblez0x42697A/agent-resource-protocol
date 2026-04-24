@@ -26,7 +26,7 @@ Conceptually:
 
 `RegistrationRecord = (resourceId, versionId, resourceKind, status, implementationRef, interfaceRef, config, stateDigest, metadata, lineageRef, auditRef, extensions)`
 
-The registration record binds the RSPL resource entity to a concrete versioned registry entry.
+The registration record binds the RSPL resource to a concrete versioned registry entry.
 
 ## Registration Record Fields
 
