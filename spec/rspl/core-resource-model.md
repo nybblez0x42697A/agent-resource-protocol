@@ -6,7 +6,7 @@ This document defines the initial RSPL core resource model.
 
 It is normative for:
 
-- the starting resource classes
+- the starting resource kinds
 - the shared resource tuple
 - field-boundary categories used by later registration, lifecycle, and lineage specifications
 
@@ -16,7 +16,7 @@ This model defines what a managed resource is at the protocol layer.
 
 It does not yet define:
 
-- full registration-record lifecycle semantics
+- full registration record lifecycle semantics
 - version-history graph rules
 - rollback behavior
 - operator workflows for evaluation or self-evolution
@@ -28,14 +28,14 @@ Those belong to later increments.
 The resource model follows these constraints:
 
 1. resource kinds must be extensible
-2. the starting classes are a protocol baseline, not a permanently closed universe
+2. the starting kinds are a protocol baseline, not a permanently closed universe
 3. identity fields must be clearly separable from mutable fields
 4. metadata must not silently redefine semantics carried by core protocol fields
 5. provisional extensions must be isolated from mandatory core meaning
 
-## Starting Resource Classes
+## Starting Resource Kinds
 
-The protocol starts with the following resource classes:
+The protocol starts with the following resource kinds:
 
 - `prompt`
 - `agent`
@@ -43,9 +43,9 @@ The protocol starts with the following resource classes:
 - `environment`
 - `memory`
 
-These classes are the initial RSPL baseline because they cover the paper’s motivating substrate and provide enough structure for registration, inspection, and later lineage work.
+These kinds are the initial RSPL baseline because they cover the paper’s motivating substrate and provide enough structure for registration, inspection, and later lineage work.
 
-These classes are not exhaustive. Additional resource classes may be introduced through explicit extension points rather than by changing the meaning of the baseline classes.
+These kinds are not exhaustive. Additional resource kinds may be introduced through explicit extension points rather than by changing the meaning of the baseline kinds.
 
 ## Shared Resource Entity Tuple
 
@@ -61,7 +61,7 @@ The tuple is conceptual, not positional wire syntax. Later schemas may represent
 
 The protocol category of the resource.
 
-It must be one of the baseline classes or an explicitly declared extension kind.
+It must be one of the baseline kinds or an explicitly declared extension kind.
 
 ### `resourceId`
 
@@ -177,9 +177,9 @@ Rules for `extensions`:
 3. extensions may add adopter-specific or future protocol data so long as the core tuple remains valid without them
 4. if an extension becomes necessary for baseline interoperability, it must be promoted into the core through explicit specification change
 
-## Resource-Class Notes
+## Resource Kind Notes
 
-The shared tuple applies to all baseline classes, but each class emphasizes different parts of the tuple.
+The shared tuple applies to all baseline kinds, but each kind emphasizes different parts of the tuple.
 
 ### `prompt`
 
@@ -209,5 +209,5 @@ An RSPL resource model implementation conforms to this document if:
 
 1. it represents each managed resource using the shared tuple semantics defined here
 2. it preserves the distinction between identity, configuration, metadata, and evolvable state
-3. it treats the baseline resource classes as the starting interoperable set
+3. it treats the baseline resource kinds as the starting interoperable set
 4. it isolates adopter-specific additions inside explicit extension mechanisms rather than redefining mandatory fields

@@ -52,7 +52,7 @@ Rules:
 
 ### `resourceKind`
 
-The registered resource class as defined by the RSPL core resource model.
+The registered resource kind as defined by the RSPL core resource model.
 
 ### `status`
 

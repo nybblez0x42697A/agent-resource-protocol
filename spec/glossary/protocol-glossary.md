@@ -64,9 +64,21 @@ The recorded relationship between resource versions and mutations over time, inc
 
 A protocol-governed operation that returns a managed resource to an earlier approved state or reconstructs a new version from prior lineage.
 
+### Supersession
+
+The lifecycle state and transition by which a previously active version is replaced when a new version becomes active for the same resource. A superseded version remains part of append-only history and is recorded in lineage through the `supersedesVersionId` field, which identifies the immediately prior active version that was replaced. Activating a new version must transition the previously active version to `superseded` unless no prior active version exists, as defined in `lifecycle-and-transition-semantics.md`.
+
 ### Audit Record
 
 The minimum protocol-visible evidence associated with a resource change, evaluation, restore, or commit event.
+
+### Actor Identity
+
+The protocol-visible identifier and type establishing accountability for control-plane operations, required in every request envelope and audit record. Every operation must execute in the context of a protocol-visible actor representable as a stable identifier and type; baseline types are `user`, `service`, and `delegate`, as defined in `security-and-policy-model.md`. Authentication establishes the identity bound to the actor before authorization and policy evaluation occur.
+
+### Mutation Type
+
+The enumerated discriminator classifying the kind of change that produced a resource version, recorded on both lineage nodes and audit records. Baseline values are `create`, `update`, `restore`, `fork`, and `import`, as defined in `common.schema.json`. The `mutationType` field on lineage nodes (parallel to the `action` field on audit records, which uses the identical `auditAction` enum) distinguishes creation from restoration and derivation, with `restore` mutations additionally recording the earlier version state target in `restoredFromVersionId`.
 
 ### Attestation
 
@@ -114,7 +126,7 @@ A named stewarded bundle of additional operational expectations such as observab
 
 ### Conformance Claim
 
-A published assertion by an implementation that it satisfies a named conformance baseline (such as `baseline`) and optionally one or more readiness profiles layered above it. A conformance level is the named baseline or stricter profile scope against which such a claim is made. Claims must be demonstrable through semantic alignment with normative artifacts and compatibility with the corresponding schema set.
+A published assertion by an implementation that it satisfies a named conformance `baseline` (such as `baseline`) and optionally one or more readiness profiles layered above it. A conformance level is the named baseline or stricter profile scope against which such a claim is made. Claims are expected to be traceable to evidence of semantic alignment with normative artifacts and compatibility with the corresponding schema set.
 
 ### Failure Taxonomy / Diagnostic Code
 
