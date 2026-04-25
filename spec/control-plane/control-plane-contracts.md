@@ -297,6 +297,10 @@ Optional error fields:
 - `details`
 - `conflictingVersionId`
 
+`actualVersionId`, when present, identifies the version actually observed in the registry at the time of the failed operation; it pairs with `expectedVersionId` to make optimistic-concurrency mismatches diagnosable without re-fetching state.
+
+`details`, when present, carries an open-ended object map of error-context fields the implementation chooses to expose (such as the offending field path, conflicting identifier values, or a structured policy reason); the canonical example is the `details` block in `examples/conformance-vectors/conflict-error.valid.json`.
+
 `conflictingVersionId`, when present, identifies the version that already occupies the version slot or lifecycle position the request expected to write to or transition through. It appears at the top of the `error` object (sibling to `retryable`) for lifecycle-conflict scenarios such as an `expectedVersionId` mismatch — the canonical example is `examples/conformance-vectors/conflict-error.valid.json`.
 
 ## Error Categories
