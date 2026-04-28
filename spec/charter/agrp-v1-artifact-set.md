@@ -50,11 +50,13 @@ This document defines which of those documents together constitute `AGRP v1` so 
 - `spec/extensions/extension-and-profile-model.md`
 - `spec/discovery/capability-discovery-and-negotiation.md`
 - `spec/versioning/versioning-and-evolution-policy.md`
+- `spec/versioning/agrp-v1-release-definition.md`
 - `spec/deprecation/deprecation-and-sunset-policy.md`
 - `spec/composition/dependency-and-composition-model.md`
 - `spec/diagnostics/failure-taxonomy-and-diagnostics.md`
 - `spec/observability/observability-and-trace-correlation.md`
 - `spec/rollout/rollout-and-stage-policy.md`
+- `spec/deployment/deployment-topology-and-trust-boundaries.md`
 - `spec/governance/artifact-governance-and-registry-policy.md`
 - `spec/compliance/compliance-and-readiness-profiles.md`
 - `spec/compliance/profile-evolution-and-progressive-adoption.md`
@@ -62,6 +64,7 @@ This document defines which of those documents together constitute `AGRP v1` so 
 - `spec/compliance/declaration-conflict-and-supersession-resolution.md`
 - `spec/compliance/compliance-precedence-and-integration-policy.md`
 - `spec/compliance/compliance-partial-failure-handling.md`
+- `spec/compliance/evidence-freshness-and-attestation.md`
 
 ## Normative Role Of The Artifact Set
 
