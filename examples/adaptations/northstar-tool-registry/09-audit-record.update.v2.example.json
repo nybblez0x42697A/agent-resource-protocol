@@ -1,0 +1,14 @@
+{
+  "commitId": "urn:northstar:commit:01HZ8K6P0V0000000000000002",
+  "resourceId": "northstar/example-search-tool",
+  "versionId": "0.2.0",
+  "action": "update",
+  "actor": "urn:northstar:actor:publisher:tools-team",
+  "rationale": "Iterated v0.1.0 to v0.2.0. Capability change: added 'summarize'. Compatibility-breaking? No: 'search' behavior preserved. Submitted in preview stage pending steward promotion.",
+  "evidenceRefs": [
+    "urn:northstar:evidence:unit-tests:northstar/example-search-tool/0.2.0",
+    "urn:northstar:evidence:lint-pass:northstar/example-search-tool/0.2.0",
+    "urn:northstar:evidence:capability-diff:northstar/example-search-tool/0.1.0->0.2.0"
+  ],
+  "createdAt": "2026-04-29T14:00:01Z"
+}

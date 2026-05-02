@@ -1,0 +1,41 @@
+{
+  "operation": "RegisterResourceVersion",
+  "requestId": "urn:northstar:request:01HZ8K6P0V0000000000000001",
+  "result": {
+    "resourceId": "northstar/example-search-tool",
+    "versionId": "0.1.0",
+    "registrationRecord": {
+      "resourceId": "northstar/example-search-tool",
+      "versionId": "0.1.0",
+      "resourceKind": "tool",
+      "status": "active",
+      "implementationRef": "oci://registry.northstar.example/tools/example-search-tool@sha256:7f83b1657ff1fc53b92dc18148a1d65dfc2d4b1fa3d677284addd200126d9069",
+      "interfaceRef": "https://registry.northstar.example/tools/example-search-tool/interfaces/0.1.0.json",
+      "config": {
+        "defaultMaxResults": 10,
+        "timeoutSeconds": 30
+      },
+      "stateDigest": "sha256:44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "metadata": {
+        "lifecycleState": "draft",
+        "northstarStage": "preview",
+        "registeredAt": "2026-04-29T10:00:01Z",
+        "displayName": "Example Search Tool",
+        "capabilities": ["search"]
+      },
+      "lineageRef": "urn:northstar:lineage:northstar/example-search-tool/0.1.0",
+      "auditRef": "urn:northstar:commit:01HZ8K6P0V0000000000000001"
+    },
+    "lineageNode": {
+      "resourceId": "northstar/example-search-tool",
+      "versionId": "0.1.0",
+      "parentVersionId": null,
+      "mutationType": "create",
+      "commitId": "urn:northstar:commit:01HZ8K6P0V0000000000000001",
+      "createdAt": "2026-04-29T10:00:01Z",
+      "changeSummary": "Initial creation of northstar/example-search-tool. Root of the lineage chain; no parent version.",
+      "restoredFromVersionId": null,
+      "supersedesVersionId": null
+    }
+  }
+}

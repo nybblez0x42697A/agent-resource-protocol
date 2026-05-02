@@ -1,0 +1,45 @@
+{
+  "implementationId": "urn:northstar:implementation:registry:01",
+  "conformance": "baseline",
+  "bindings": [
+    "https-json"
+  ],
+  "profiles": [
+    "northstar:profile:tool-registry-readiness:v1"
+  ],
+  "extensions": [
+    "northstar:extension:northstar-stage-metadata:v1"
+  ],
+  "operations": [
+    "RegisterResourceVersion",
+    "GetRegistrationRecord",
+    "ListResourceVersions",
+    "TransitionLifecycleState",
+    "GetLineage",
+    "GetAuditRecord"
+  ],
+  "resourceKinds": [
+    "tool"
+  ],
+  "notes": {
+    "publishedAt": "2026-04-29T16:05:00Z",
+    "registryEndpoint": "https://registry.northstar.example/v1/control-plane",
+    "discoverySurface": "https://registry.northstar.example/v1/catalog",
+    "currentlyAdvertisedTools": [
+      {
+        "resourceId": "northstar/example-search-tool",
+        "recommendedVersionId": "0.2.0",
+        "recommendedLifecycleState": "active",
+        "northstarStage": "general-availability",
+        "lineageVersionIds": ["0.1.0", "0.2.0"]
+      }
+    ],
+    "northstarStageVocabulary": [
+      "development",
+      "preview",
+      "general-availability",
+      "deprecated",
+      "sunset"
+    ]
+  }
+}

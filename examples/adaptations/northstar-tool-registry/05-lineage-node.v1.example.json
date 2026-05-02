@@ -1,0 +1,11 @@
+{
+  "resourceId": "northstar/example-search-tool",
+  "versionId": "0.1.0",
+  "parentVersionId": null,
+  "mutationType": "create",
+  "commitId": "urn:northstar:commit:01HZ8K6P0V0000000000000001",
+  "createdAt": "2026-04-29T10:00:01Z",
+  "changeSummary": "Initial creation of northstar/example-search-tool. Root of the lineage chain; no parent version.",
+  "restoredFromVersionId": null,
+  "supersedesVersionId": null
+}

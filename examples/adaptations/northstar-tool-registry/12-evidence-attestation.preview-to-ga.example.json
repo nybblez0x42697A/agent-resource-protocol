@@ -1,0 +1,31 @@
+{
+  "evidenceId": "urn:northstar:evidence:attestation:northstar/example-search-tool/0.2.0/preview-to-ga",
+  "subject": {
+    "resourceId": "northstar/example-search-tool",
+    "versionId": "0.2.0",
+    "transition": "draft->active",
+    "northstarStageTransition": "preview->general-availability"
+  },
+  "evidenceType": "test result",
+  "attestationStatus": "externally attested",
+  "collectedAt": "2026-04-29T15:30:00Z",
+  "observedAt": "2026-04-29T15:30:00Z",
+  "attestorId": "urn:northstar:actor:attestor:release-engineering",
+  "attestedAt": "2026-04-29T15:55:00Z",
+  "validUntil": "2026-10-29T15:55:00Z",
+  "freshness": {
+    "policyContext": "northstar:promotion-attestation-policy:v1",
+    "freshnessWindowDays": 184,
+    "state": "fresh"
+  },
+  "supportingEvidenceRefs": [
+    "urn:northstar:evidence:unit-tests:northstar/example-search-tool/0.2.0",
+    "urn:northstar:evidence:integration-tests:northstar/example-search-tool/0.2.0",
+    "urn:northstar:evidence:security-review:northstar/example-search-tool/0.2.0",
+    "urn:northstar:evidence:capability-diff:northstar/example-search-tool/0.1.0->0.2.0"
+  ],
+  "attestationSignature": {
+    "algorithm": "ed25519",
+    "value": "MEUCIQDxample-signature-content-base64-encoded-not-a-real-signaturePQIgABCD"
+  }
+}

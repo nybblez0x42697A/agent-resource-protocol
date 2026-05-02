@@ -1,0 +1,12 @@
+{
+  "commitId": "urn:northstar:commit:01HZ8K6P0V0000000000000003",
+  "resourceId": "northstar/example-search-tool",
+  "versionId": "0.2.0",
+  "action": "update",
+  "actor": "urn:northstar:actor:steward:registry-governance",
+  "rationale": "Lifecycle transition draft->active for v0.2.0 (Northstar surface stage preview->general-availability). Backed by attestation urn:northstar:evidence:attestation:northstar/example-search-tool/0.2.0/preview-to-ga signed by release-engineering on 2026-04-29T15:55:00Z.",
+  "evidenceRefs": [
+    "urn:northstar:evidence:attestation:northstar/example-search-tool/0.2.0/preview-to-ga"
+  ],
+  "createdAt": "2026-04-29T16:00:00Z"
+}

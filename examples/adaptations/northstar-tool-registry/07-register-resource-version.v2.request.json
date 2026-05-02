@@ -1,0 +1,42 @@
+{
+  "operation": "RegisterResourceVersion",
+  "requestId": "urn:northstar:request:01HZ8K6P0V0000000000000002",
+  "actor": "urn:northstar:actor:publisher:tools-team",
+  "registrationRecord": {
+    "resourceId": "northstar/example-search-tool",
+    "versionId": "0.2.0",
+    "resourceKind": "tool",
+    "status": "active",
+    "implementationRef": "oci://registry.northstar.example/tools/example-search-tool@sha256:9f8e7d6c5b4a3928171605d4e3c2b1a9876543210fedcba9876543210fedcba9",
+    "interfaceRef": "https://registry.northstar.example/tools/example-search-tool/interfaces/0.2.0.json",
+    "config": {
+      "defaultMaxResults": 10,
+      "timeoutSeconds": 45,
+      "summarizeMaxTokens": 512
+    },
+    "stateDigest": "sha256:44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "metadata": {
+      "lifecycleState": "draft",
+      "northstarStage": "preview",
+      "registeredAt": "2026-04-29T14:00:01Z",
+      "displayName": "Example Search Tool",
+      "capabilities": ["search", "summarize"]
+    },
+    "lineageRef": "urn:northstar:lineage:northstar/example-search-tool/0.2.0",
+    "auditRef": "urn:northstar:commit:01HZ8K6P0V0000000000000002"
+  },
+  "auditRecord": {
+    "commitId": "urn:northstar:commit:01HZ8K6P0V0000000000000002",
+    "resourceId": "northstar/example-search-tool",
+    "versionId": "0.2.0",
+    "action": "update",
+    "actor": "urn:northstar:actor:publisher:tools-team",
+    "rationale": "Iterated v0.1.0 to v0.2.0. Capability change: added 'summarize'. Compatibility-breaking? No: 'search' behavior preserved. Submitted in preview stage pending steward promotion.",
+    "evidenceRefs": [
+      "urn:northstar:evidence:unit-tests:northstar/example-search-tool/0.2.0",
+      "urn:northstar:evidence:lint-pass:northstar/example-search-tool/0.2.0",
+      "urn:northstar:evidence:capability-diff:northstar/example-search-tool/0.1.0->0.2.0"
+    ],
+    "createdAt": "2026-04-29T14:00:01Z"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "commitId": "urn:northstar:commit:01HZ8K6P0V0000000000000001",
+  "resourceId": "northstar/example-search-tool",
+  "versionId": "0.1.0",
+  "action": "create",
+  "actor": "urn:northstar:actor:publisher:tools-team",
+  "rationale": "Initial publication of v0.1.0 to the Northstar registry. Capability set: [search]. Submitted in preview stage for selected consumer evaluation.",
+  "evidenceRefs": [
+    "urn:northstar:evidence:unit-tests:northstar/example-search-tool/0.1.0",
+    "urn:northstar:evidence:lint-pass:northstar/example-search-tool/0.1.0"
+  ],
+  "createdAt": "2026-04-29T10:00:01Z"
+}

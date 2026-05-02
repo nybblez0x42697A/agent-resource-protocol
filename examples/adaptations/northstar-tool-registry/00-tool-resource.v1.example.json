@@ -1,0 +1,26 @@
+{
+  "resourceKind": "tool",
+  "resourceId": "northstar/example-search-tool",
+  "versionId": "0.1.0",
+  "implementationRef": "oci://registry.northstar.example/tools/example-search-tool@sha256:7f83b1657ff1fc53b92dc18148a1d65dfc2d4b1fa3d677284addd200126d9069",
+  "interfaceRef": "https://registry.northstar.example/tools/example-search-tool/interfaces/0.1.0.json",
+  "config": {
+    "defaultMaxResults": 10,
+    "timeoutSeconds": 30
+  },
+  "state": {},
+  "metadata": {
+    "northstarStage": "preview",
+    "displayName": "Example Search Tool",
+    "description": "Searches an indexed corpus for keyword matches and returns ranked snippets.",
+    "publisher": "urn:northstar:actor:publisher:tools-team",
+    "license": "Apache-2.0",
+    "createdAt": "2026-04-29T10:00:00Z",
+    "capabilities": ["search"],
+    "runtimeRequirements": {
+      "minMemoryMb": 128,
+      "platform": "linux/amd64"
+    },
+    "contentDigest": "sha256:7f83b1657ff1fc53b92dc18148a1d65dfc2d4b1fa3d677284addd200126d9069"
+  }
+}

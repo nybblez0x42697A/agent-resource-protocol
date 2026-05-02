@@ -1,0 +1,13 @@
+{
+  "resourceId": "northstar/example-search-tool",
+  "versionId": "0.2.0",
+  "actor": "urn:northstar:actor:steward:registry-governance",
+  "expectedVersionId": "0.2.0",
+  "fromState": "draft",
+  "toState": "active",
+  "rationale": "Promote v0.2.0 from preview to general-availability. All gating evidence collected and attested: unit tests, integration tests, security review, capability diff signed by release-engineering.",
+  "restoredFromVersionId": null,
+  "evidenceRefs": [
+    "urn:northstar:evidence:attestation:northstar/example-search-tool/0.2.0/preview-to-ga"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "resourceId": "northstar/example-search-tool",
+  "versionId": "0.2.0",
+  "parentVersionId": "0.1.0",
+  "mutationType": "update",
+  "commitId": "urn:northstar:commit:01HZ8K6P0V0000000000000002",
+  "createdAt": "2026-04-29T14:00:01Z",
+  "changeSummary": "Capability change: added 'summarize' alongside existing 'search'. Increased timeout to accommodate summarization latency. Memory minimum raised to 256 MB.",
+  "restoredFromVersionId": null,
+  "supersedesVersionId": null
+}
