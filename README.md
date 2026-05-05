@@ -14,6 +14,12 @@ Starting separately is the cleaner choice than contributing directly into the ex
 
 This repository treats existing implementations and papers as inputs and reference points, not as the source of truth by default.
 
+## Status
+
+AGRP v1.0.0 was published on 2026-05-03 as the annotated tag `agrp-v1.0.0` on the publication-increment closing commit. The release boundary is the artifact set enumerated at `spec/charter/agrp-v1-artifact-set.md` lines 41-67. Companion artifacts: the publication manifest at `docs/release-publication/agrp-v1.0.0-publication-manifest.example.json`, the changelog at `CHANGELOG.md`, and the release announcement at `docs/release-publication/agrp-v1.0.0-announcement.md`.
+
+Conformance against v1.0.0 is checked by `python3 tools/conformance/run_conformance_vectors.py`, which validates 19 fixtures under `examples/conformance-vectors/`. A reference adaptation lives at `docs/adaptations/northstar-tool-registry.md` (design narrative) and `examples/adaptations/northstar-tool-registry/` (concrete artifact bundle); an executable replay of that bundle is at `tools/adaptations/replay-northstar.py`.
+
 ## Scope
 
 This repository is for:

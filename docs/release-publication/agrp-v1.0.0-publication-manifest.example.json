@@ -37,7 +37,10 @@
   "supportingMaterials": [
     "models/schemas/",
     "examples/",
-    "adopters/"
+    "adopters/",
+    "docs/adaptations/northstar-tool-registry.md",
+    "examples/adaptations/northstar-tool-registry/",
+    "tools/adaptations/replay-northstar.py"
   ],
   "deferredAreas": [
     "spec/sepl/"
@@ -45,5 +48,15 @@
   "notes": [
     "This manifest is non-normative.",
     "It illustrates one way to package a release publication without becoming the only required format."
+  ],
+  "releaseHistory": [
+    { "id": "0041", "title": "AGRP spec drift remediation",                  "closingCommit": "7f34a71", "mergedAt": "2026-04-24" },
+    { "id": "0042", "title": "Follow-up drift remediation",                  "closingCommit": "6c00cca", "mergedAt": "2026-04-25" },
+    { "id": "0043", "title": "v1 readiness pass cleanup",                    "closingCommit": "83a7980", "mergedAt": "2026-04-25" },
+    { "id": "0044", "title": "Retrospective ADRs",                           "closingCommit": "2d7e128", "mergedAt": "2026-04-26" },
+    { "id": "0045", "title": "Release readiness audit",                      "closingCommit": "69bf3ae", "mergedAt": "2026-04-26" },
+    { "id": "0046", "title": "Charter/spec inventory reconciliation",        "closingCommit": "902f769", "mergedAt": "2026-04-28" },
+    { "id": "0047", "title": "Northstar tool registry reference adaptation", "closingCommit": "fc0d7bf", "mergedAt": "2026-05-01" },
+    { "id": "0048", "title": "Northstar adaptation replay proof",            "closingCommit": "3ee0801", "mergedAt": "2026-05-03" }
   ]
 }
