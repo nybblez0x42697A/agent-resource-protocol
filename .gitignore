@@ -40,3 +40,10 @@ tmp/
 .specweave/docs-site-internal/
 .claude-plugin/
 plugins/
+
+# Post-publication hygiene — 0050
+# Local SpecWeave / Claude Code state (not contributor-facing repo surface)
+.claude/
+AGENTS.md
+CLAUDE.md
+vskill.lock
