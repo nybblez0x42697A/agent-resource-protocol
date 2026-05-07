@@ -42,10 +42,10 @@ This section presents the eight SEPL concerns enumerated and locked at C2. It is
 | ID | Concern | Source anchor in autogenesis paper |
 |----|---------|-----------------------------------|
 | SEPL-01 | Candidate-change proposal envelope | `docs/papers/autogenesis-agp-decomposition.md:82-88` (§6 Operatorized loop), `docs/papers/autogenesis-agp-decomposition.md:181-191` (§5 Underspec / Operator contracts) |
-| SEPL-02 | Evaluation criterion declaration | `docs/papers/autogenesis-agp-decomposition.md:82` (§6 "evaluating candidates"), `docs/papers/autogenesis-agp-decomposition.md:181-191` (§5 "preconditions and postconditions") |
-| SEPL-03 | Commit semantics for accepted self-mutation, with rollback provenance | `docs/papers/autogenesis-agp-decomposition.md:82` (§6 "committing accepted updates"), `docs/papers/autogenesis-agp-decomposition.md:251` (Bottom-line "lifecycle, lineage, auditability, and rollback belong in the protocol layer") |
+| SEPL-02 | Evaluation criterion declaration | `docs/papers/autogenesis-agp-decomposition.md:80-88` (§6 "evaluating candidates"), `docs/papers/autogenesis-agp-decomposition.md:181-191` (§5 "preconditions and postconditions") |
+| SEPL-03 | Commit semantics for accepted self-mutation, with rollback provenance | `docs/papers/autogenesis-agp-decomposition.md:80-88` (§6 "committing accepted updates"), `docs/papers/autogenesis-agp-decomposition.md:246-250` (Bottom-line "lifecycle, lineage, auditability, and rollback belong in the protocol layer") |
 | SEPL-04 | Operator-contract preconditions and failure modes | `docs/papers/autogenesis-agp-decomposition.md:181-191` (§5 Underspec "preconditions and postconditions, failure modes") |
-| SEPL-05 | Approval / policy gate | `docs/papers/autogenesis-agp-decomposition.md:181-191` (§5 Underspec "approval and policy gates"), `docs/papers/autogenesis-agp-decomposition.md:86` (§6 "operator boundaries make self-evolution reviewable and auditable") |
+| SEPL-05 | Approval / policy gate | `docs/papers/autogenesis-agp-decomposition.md:181-191` (§5 Underspec "approval and policy gates"), `docs/papers/autogenesis-agp-decomposition.md:84-88` (§6 "operator boundaries make self-evolution reviewable and auditable") |
 | SEPL-06 | Trace granularity and retention for evolution evidence | `docs/papers/autogenesis-agp-decomposition.md:193-202` (§6 Underspec / Trace and Observability Model — "trace granularity, retention policy") |
 | SEPL-07 | Privacy / redaction boundaries for self-evolution traces | `docs/papers/autogenesis-agp-decomposition.md:193-202` (§6 Underspec — "privacy or redaction boundaries") |
 | SEPL-08 | Operator extension model (alternate operators / strategies) | `docs/papers/autogenesis-agp-decomposition.md:204-206` (§7 Underspec / Extension Model) |
