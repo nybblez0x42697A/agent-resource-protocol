@@ -1,0 +1,14 @@
+{
+  "operation": "TransitionLifecycleState",
+  "requestId": "urn:pinecrest:request:01HZCCCC00000000000000000C",
+  "actor": "pinecrest:steward:catalog-governance",
+  "resourceId": "pinecrest/customer-orders-daily",
+  "versionId": "1.1.0",
+  "expectedVersionId": "1.1.0",
+  "fromState": "draft",
+  "toState": "active",
+  "rationale": "Promote v1.1.0 from draft to active after refresh-SLA validation. Three consecutive successful daily refreshes within the 240-minute SLA window were recorded over 2026-05-04 through 2026-05-06; refresh-SLA attestation issued by pinecrest:attestor:refresh-sla-signer.",
+  "evidenceRefs": [
+    "urn:pinecrest:evidence:refresh-sla:pinecrest/customer-orders-daily/1.1.0/2026-05-06"
+  ]
+}

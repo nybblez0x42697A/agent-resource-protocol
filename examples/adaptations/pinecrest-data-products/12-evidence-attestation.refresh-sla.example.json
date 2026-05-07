@@ -1,0 +1,33 @@
+{
+  "evidenceId": "urn:pinecrest:evidence:refresh-sla:pinecrest/customer-orders-daily/1.1.0/2026-05-06",
+  "subject": {
+    "resourceId": "pinecrest/customer-orders-daily",
+    "versionId": "1.1.0",
+    "transition": "draft->active",
+    "policyTopic": "refresh-SLA"
+  },
+  "evidenceType": "rollout record",
+  "attestationStatus": "externally attested",
+  "collectedAt": "2026-05-06T16:00:00Z",
+  "observedAt": "2026-05-06T16:00:00Z",
+  "attestorId": "pinecrest:attestor:refresh-sla-signer",
+  "attestedAt": "2026-05-06T16:00:01Z",
+  "validUntil": "2026-06-06T16:00:01Z",
+  "freshness": {
+    "policyContext": "pinecrest:refresh-sla-policy:v1",
+    "freshnessWindowDays": 31,
+    "state": "fresh"
+  },
+  "supportingEvidenceRefs": [
+    "urn:pinecrest:evidence:refresh-run:pinecrest/customer-orders-daily/1.1.0/2026-05-04",
+    "urn:pinecrest:evidence:refresh-run:pinecrest/customer-orders-daily/1.1.0/2026-05-05",
+    "urn:pinecrest:evidence:refresh-run:pinecrest/customer-orders-daily/1.1.0/2026-05-06",
+    "urn:pinecrest:evidence:non-breaking-diff:pinecrest/customer-orders-daily/1.0.0-to-1.1.0"
+  ],
+  "attestationDetails": {
+    "slaWindowMinutes": 240,
+    "consecutiveSuccessfulRefreshes": 3,
+    "earliestObservedRunMinutes": 38,
+    "latestObservedRunMinutes": 52
+  }
+}

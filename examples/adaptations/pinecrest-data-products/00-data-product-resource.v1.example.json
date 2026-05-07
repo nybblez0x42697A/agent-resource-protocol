@@ -1,0 +1,52 @@
+{
+  "resourceKind": "memory",
+  "resourceId": "pinecrest/customer-orders-daily",
+  "versionId": "1.0.0",
+  "implementationRef": "https://catalog.pinecrest.example/data-products/customer-orders-daily/1.0.0/data",
+  "interfaceRef": "https://catalog.pinecrest.example/data-products/customer-orders-daily/interfaces/1.0.0.json",
+  "config": {
+    "queryEngine": "duckdb-1.0",
+    "maxConcurrentReads": 50
+  },
+  "state": {},
+  "metadata": {
+    "pinecrestSubKind": "data-product",
+    "lifecycleState": "draft",
+    "displayName": "Customer Orders — Daily",
+    "description": "Curated daily-aggregated view of customer orders, partitioned by order date. Built from customer-master and order-events-stream.",
+    "owner": "pinecrest:owner:customer-orders-team",
+    "createdAt": "2026-05-06T14:00:00Z",
+    "declaredSchema": {
+      "columns": [
+        {"name": "order_id", "type": "string", "nullable": false},
+        {"name": "customer_id", "type": "string", "nullable": false},
+        {"name": "order_date", "type": "date", "nullable": false},
+        {"name": "total_amount", "type": "decimal(18,2)", "nullable": false},
+        {"name": "status", "type": "string", "nullable": false, "enum": ["placed", "shipped", "delivered", "cancelled"]}
+      ],
+      "partitionKey": "order_date"
+    },
+    "refreshPolicy": {
+      "cron": "0 2 * * *",
+      "timezone": "UTC",
+      "slaWindowMinutes": 240
+    },
+    "capabilityFeatures": ["partitioned-by-day", "pii-redacted"],
+    "compositionDependencies": [
+      {
+        "dependentArtifact": "pinecrest/customer-orders-daily@1.0.0",
+        "targetArtifact": "pinecrest/customer-master@v3",
+        "dependencyType": "requires",
+        "required": true,
+        "compatibilityExpectation": "schema-stable-pinned"
+      },
+      {
+        "dependentArtifact": "pinecrest/customer-orders-daily@1.0.0",
+        "targetArtifact": "pinecrest/order-events-stream@v7",
+        "dependencyType": "requires",
+        "required": true,
+        "compatibilityExpectation": "schema-stable-pinned"
+      }
+    ]
+  }
+}

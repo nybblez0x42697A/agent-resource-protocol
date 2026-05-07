@@ -1,0 +1,13 @@
+{
+  "resourceId": "pinecrest/customer-orders-daily",
+  "versionId": "1.1.0",
+  "actor": "pinecrest:steward:catalog-governance",
+  "expectedVersionId": "1.1.0",
+  "fromState": "draft",
+  "toState": "active",
+  "rationale": "Lifecycle transition draft->active for v1.1.0. Three consecutive successful daily refreshes within the 240-minute SLA window. Refresh-SLA attestation issued by pinecrest:attestor:refresh-sla-signer on 2026-05-06T16:00:01Z.",
+  "evidenceRefs": [
+    "urn:pinecrest:evidence:refresh-sla:pinecrest/customer-orders-daily/1.1.0/2026-05-06"
+  ],
+  "restoredFromVersionId": null
+}

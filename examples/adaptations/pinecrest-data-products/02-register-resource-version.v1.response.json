@@ -1,0 +1,41 @@
+{
+  "operation": "RegisterResourceVersion",
+  "requestId": "urn:pinecrest:request:01HZAAAA00000000000000000A",
+  "result": {
+    "resourceId": "pinecrest/customer-orders-daily",
+    "versionId": "1.0.0",
+    "registrationRecord": {
+      "resourceId": "pinecrest/customer-orders-daily",
+      "versionId": "1.0.0",
+      "resourceKind": "memory",
+      "status": "active",
+      "implementationRef": "https://catalog.pinecrest.example/data-products/customer-orders-daily/1.0.0/data",
+      "interfaceRef": "https://catalog.pinecrest.example/data-products/customer-orders-daily/interfaces/1.0.0.json",
+      "config": {
+        "queryEngine": "duckdb-1.0",
+        "maxConcurrentReads": 50
+      },
+      "stateDigest": "sha256:44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "metadata": {
+        "lifecycleState": "draft",
+        "pinecrestSubKind": "data-product",
+        "displayName": "Customer Orders — Daily",
+        "registeredAt": "2026-05-06T14:00:05Z",
+        "capabilityFeatures": ["partitioned-by-day", "pii-redacted"]
+      },
+      "lineageRef": "urn:pinecrest:lineage:pinecrest/customer-orders-daily/1.0.0",
+      "auditRef": "urn:pinecrest:commit:01HZAAAA00000000000000000A"
+    },
+    "lineageNode": {
+      "resourceId": "pinecrest/customer-orders-daily",
+      "versionId": "1.0.0",
+      "parentVersionId": null,
+      "mutationType": "create",
+      "commitId": "urn:pinecrest:commit:01HZAAAA00000000000000000A",
+      "createdAt": "2026-05-06T14:00:06Z",
+      "changeSummary": "Initial creation of pinecrest/customer-orders-daily. Root of the lineage chain; no parent version.",
+      "restoredFromVersionId": null,
+      "supersedesVersionId": null
+    }
+  }
+}

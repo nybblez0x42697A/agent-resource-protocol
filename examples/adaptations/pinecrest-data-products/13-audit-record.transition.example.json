@@ -1,0 +1,12 @@
+{
+  "commitId": "urn:pinecrest:commit:01HZCCCC00000000000000000C",
+  "resourceId": "pinecrest/customer-orders-daily",
+  "versionId": "1.1.0",
+  "action": "update",
+  "actor": "pinecrest:steward:catalog-governance",
+  "rationale": "Lifecycle transition draft->active for v1.1.0. Backed by refresh-SLA attestation urn:pinecrest:evidence:refresh-sla:pinecrest/customer-orders-daily/1.1.0/2026-05-06 signed by pinecrest:attestor:refresh-sla-signer on 2026-05-06T16:00:01Z.",
+  "evidenceRefs": [
+    "urn:pinecrest:evidence:refresh-sla:pinecrest/customer-orders-daily/1.1.0/2026-05-06"
+  ],
+  "createdAt": "2026-05-06T16:00:02Z"
+}

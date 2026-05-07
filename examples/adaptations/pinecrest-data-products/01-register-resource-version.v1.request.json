@@ -1,0 +1,40 @@
+{
+  "operation": "RegisterResourceVersion",
+  "requestId": "urn:pinecrest:request:01HZAAAA00000000000000000A",
+  "actor": "pinecrest:owner:customer-orders-team",
+  "registrationRecord": {
+    "resourceId": "pinecrest/customer-orders-daily",
+    "versionId": "1.0.0",
+    "resourceKind": "memory",
+    "status": "active",
+    "implementationRef": "https://catalog.pinecrest.example/data-products/customer-orders-daily/1.0.0/data",
+    "interfaceRef": "https://catalog.pinecrest.example/data-products/customer-orders-daily/interfaces/1.0.0.json",
+    "config": {
+      "queryEngine": "duckdb-1.0",
+      "maxConcurrentReads": 50
+    },
+    "stateDigest": "sha256:44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "metadata": {
+      "lifecycleState": "draft",
+      "pinecrestSubKind": "data-product",
+      "displayName": "Customer Orders — Daily",
+      "registeredAt": "2026-05-06T14:00:05Z",
+      "capabilityFeatures": ["partitioned-by-day", "pii-redacted"]
+    },
+    "lineageRef": "urn:pinecrest:lineage:pinecrest/customer-orders-daily/1.0.0",
+    "auditRef": "urn:pinecrest:commit:01HZAAAA00000000000000000A"
+  },
+  "auditRecord": {
+    "commitId": "urn:pinecrest:commit:01HZAAAA00000000000000000A",
+    "resourceId": "pinecrest/customer-orders-daily",
+    "versionId": "1.0.0",
+    "action": "create",
+    "actor": "pinecrest:owner:customer-orders-team",
+    "rationale": "Initial publication of v1.0.0 (Customer Orders — Daily) to the Pinecrest catalog. Composed from pinecrest/customer-master@v3 and pinecrest/order-events-stream@v7. Submitted in draft for refresh-SLA validation before activation.",
+    "evidenceRefs": [
+      "urn:pinecrest:evidence:schema-validation:pinecrest/customer-orders-daily/1.0.0",
+      "urn:pinecrest:evidence:upstream-pin-check:pinecrest/customer-orders-daily/1.0.0"
+    ],
+    "createdAt": "2026-05-06T14:00:05Z"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "resourceKind": "memory",
+  "resourceId": "pinecrest/customer-orders-daily",
+  "versionId": "1.1.0",
+  "implementationRef": "https://catalog.pinecrest.example/data-products/customer-orders-daily/1.1.0/data",
+  "interfaceRef": "https://catalog.pinecrest.example/data-products/customer-orders-daily/interfaces/1.1.0.json",
+  "config": {
+    "queryEngine": "duckdb-1.0",
+    "maxConcurrentReads": 50
+  },
+  "state": {},
+  "metadata": {
+    "pinecrestSubKind": "data-product",
+    "lifecycleState": "draft",
+    "displayName": "Customer Orders — Daily",
+    "description": "Curated daily-aggregated view of customer orders, partitioned by order date. Built from customer-master and order-events-stream. v1.1.0 adds customer_segment column (non-breaking).",
+    "owner": "pinecrest:owner:customer-orders-team",
+    "createdAt": "2026-05-06T15:00:00Z",
+    "schemaChangeNotes": "Non-breaking column add: customer_segment (string, nullable). Existing consumers reading v1.0.0 columns continue to work unchanged.",
+    "declaredSchema": {
+      "columns": [
+        {"name": "order_id", "type": "string", "nullable": false},
+        {"name": "customer_id", "type": "string", "nullable": false},
+        {"name": "order_date", "type": "date", "nullable": false},
+        {"name": "total_amount", "type": "decimal(18,2)", "nullable": false},
+        {"name": "status", "type": "string", "nullable": false, "enum": ["placed", "shipped", "delivered", "cancelled"]},
+        {"name": "customer_segment", "type": "string", "nullable": true}
+      ],
+      "partitionKey": "order_date"
+    },
+    "refreshPolicy": {
+      "cron": "0 2 * * *",
+      "timezone": "UTC",
+      "slaWindowMinutes": 240
+    },
+    "capabilityFeatures": ["partitioned-by-day", "pii-redacted"],
+    "compositionDependencies": [
+      {
+        "dependentArtifact": "pinecrest/customer-orders-daily@1.1.0",
+        "targetArtifact": "pinecrest/customer-master@v3",
+        "dependencyType": "requires",
+        "required": true,
+        "compatibilityExpectation": "schema-stable-pinned"
+      },
+      {
+        "dependentArtifact": "pinecrest/customer-orders-daily@1.1.0",
+        "targetArtifact": "pinecrest/order-events-stream@v7",
+        "dependencyType": "requires",
+        "required": true,
+        "compatibilityExpectation": "schema-stable-pinned"
+      }
+    ]
+  }
+}

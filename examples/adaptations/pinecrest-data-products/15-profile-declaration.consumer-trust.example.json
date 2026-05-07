@@ -1,0 +1,23 @@
+{
+  "profileId": "pinecrest:profile:consumer-trust:marketing-analytics",
+  "stewardId": "pinecrest:steward:catalog-governance",
+  "revision": "1",
+  "supportState": "supported",
+  "status": "active",
+  "baseConformance": "AGRP v1 baseline",
+  "additionalRequirements": [
+    "Consumers operating under this profile declare an aggregation-only access posture for any data product carrying capabilityFeatures including partitioned-by-day or pii-redacted.",
+    "Consumers must respect the pii-redacted feature flag on the focal product and not attempt re-identification by joining against external sources.",
+    "Consumers subscribe via signed access tokens issued by pinecrest:steward:catalog-governance; tokens are scoped to a specific resourceId and recommended versionId."
+  ],
+  "evidenceExpectations": [
+    "Refresh-SLA freshness-policy attestation per spec/compliance/evidence-freshness-and-attestation.md:60-89, covering the most recent 30-day window.",
+    "Non-breaking-diff evidence on every schema-version transition the consumer relies upon.",
+    "Composition-pin freshness check confirming each upstream-product reference resolves to its declared @version."
+  ],
+  "forbiddenBehaviors": [
+    "Row-level join against pinecrest/customer-master that bypasses aggregation thresholds.",
+    "Exporting raw data products outside the marketing-analytics trust boundary.",
+    "Caching consumer-side query results past the validUntil timestamp on the most recent refresh-SLA attestation."
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "implementationId": "urn:pinecrest:implementation:catalog:01",
+  "conformance": "baseline",
+  "bindings": [
+    "https-json"
+  ],
+  "profiles": [
+    "pinecrest:profile:consumer-trust:marketing-analytics"
+  ],
+  "extensions": [
+    "pinecrest:extension:composition-deps-on-resource-entity:v1",
+    "pinecrest:extension:refresh-sla-policy:v1"
+  ],
+  "operations": [
+    "RegisterResourceVersion",
+    "GetRegistrationRecord",
+    "ListResourceVersions",
+    "TransitionLifecycleState",
+    "GetLineage",
+    "GetAuditRecord"
+  ],
+  "resourceKinds": [
+    "memory"
+  ],
+  "notes": {
+    "publishedAt": "2026-05-06T16:00:03Z",
+    "catalogEndpoint": "https://catalog.pinecrest.example/v1/control-plane",
+    "discoverySurface": "https://catalog.pinecrest.example/v1/data-products",
+    "currentlyAdvertisedDataProducts": [
+      {
+        "resourceId": "pinecrest/customer-orders-daily",
+        "recommendedVersionId": "1.1.0",
+        "recommendedLifecycleState": "active",
+        "lineageVersionIds": ["1.0.0", "1.1.0"],
+        "compositionDependencies": [
+          "pinecrest/customer-master@v3",
+          "pinecrest/order-events-stream@v7"
+        ]
+      }
+    ],
+    "pinecrestSubKindVocabulary": [
+      "data-product"
+    ]
+  }
+}

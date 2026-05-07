@@ -1,0 +1,43 @@
+{
+  "operation": "RegisterResourceVersion",
+  "requestId": "urn:pinecrest:request:01HZBBBB00000000000000000B",
+  "actor": "pinecrest:owner:customer-orders-team",
+  "registrationRecord": {
+    "resourceId": "pinecrest/customer-orders-daily",
+    "versionId": "1.1.0",
+    "resourceKind": "memory",
+    "status": "active",
+    "implementationRef": "https://catalog.pinecrest.example/data-products/customer-orders-daily/1.1.0/data",
+    "interfaceRef": "https://catalog.pinecrest.example/data-products/customer-orders-daily/interfaces/1.1.0.json",
+    "config": {
+      "queryEngine": "duckdb-1.0",
+      "maxConcurrentReads": 50
+    },
+    "stateDigest": "sha256:44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "metadata": {
+      "lifecycleState": "draft",
+      "pinecrestSubKind": "data-product",
+      "displayName": "Customer Orders — Daily",
+      "registeredAt": "2026-05-06T15:00:05Z",
+      "capabilityFeatures": ["partitioned-by-day", "pii-redacted"],
+      "schemaChangeNotes": "Non-breaking column add: customer_segment"
+    },
+    "lineageRef": "urn:pinecrest:lineage:pinecrest/customer-orders-daily/1.1.0",
+    "auditRef": "urn:pinecrest:commit:01HZBBBB00000000000000000B"
+  },
+  "auditRecord": {
+    "commitId": "urn:pinecrest:commit:01HZBBBB00000000000000000B",
+    "resourceId": "pinecrest/customer-orders-daily",
+    "versionId": "1.1.0",
+    "action": "update",
+    "actor": "pinecrest:owner:customer-orders-team",
+    "rationale": "Schema evolution v1.0.0 → v1.1.0 (non-breaking column add: customer_segment). Composition dependencies unchanged (same upstream pinning). Submitted in draft for refresh-SLA validation before activation.",
+    "evidenceRefs": [
+      "urn:pinecrest:evidence:schema-validation:pinecrest/customer-orders-daily/1.1.0",
+      "urn:pinecrest:evidence:upstream-pin-check:pinecrest/customer-orders-daily/1.1.0",
+      "urn:pinecrest:evidence:non-breaking-diff:pinecrest/customer-orders-daily/1.0.0-to-1.1.0"
+    ],
+    "createdAt": "2026-05-06T15:00:05Z"
+  },
+  "expectedVersionId": "1.0.0"
+}

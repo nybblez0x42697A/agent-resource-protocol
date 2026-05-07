@@ -1,0 +1,11 @@
+{
+  "resourceId": "pinecrest/customer-orders-daily",
+  "versionId": "1.0.0",
+  "parentVersionId": null,
+  "mutationType": "create",
+  "commitId": "urn:pinecrest:commit:01HZAAAA00000000000000000A",
+  "createdAt": "2026-05-06T14:00:07Z",
+  "changeSummary": "Initial creation of pinecrest/customer-orders-daily. Root of the lineage chain; no parent version. Composition dependencies declared on the resource-entity, not on this lineage node.",
+  "restoredFromVersionId": null,
+  "supersedesVersionId": null
+}
