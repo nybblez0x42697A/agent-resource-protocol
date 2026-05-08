@@ -54,6 +54,17 @@ Any future `SEPL` standardization must be introduced through a later normative r
 
 Until such a release exists, `SEPL` remains deferred from the protocol standard even if exploratory material appears in the repository.
 
+## Sharpened Deferral For Specific SEPL Concerns
+
+The `Future Introduction Rule` defers `SEPL` standardization wholesale. Four `SEPL` concerns are named here so that the surface remaining deferred is explicit:
+
+- `SEPL-02` — declaration of evaluation criteria a candidate-change proposal must satisfy before commit, including criterion taxonomy, scope, and verification mechanism
+- `SEPL-03` — commit semantics for accepted self-mutation, including the role distinction between proposing and approving operators and the rollback provenance carried with such commits
+- `SEPL-05` — the per-change approval and policy gate between candidate proposal and commit, including the policy-expression mechanism and the audit shape of approve/reject decisions
+- `SEPL-06` — trace granularity and retention semantics for evolution evidence, including per-proposal granularity and retention policy
+
+These four concerns remain deferred from the protocol standard. All other `SEPL` concerns likewise remain deferred under the `Future Introduction Rule` above; this section sharpens the deferral surface for the four concerns named here without altering that rule.
+
 ## Relationship To AGRP v1
 
 `AGRP v1` should be interpreted as:
