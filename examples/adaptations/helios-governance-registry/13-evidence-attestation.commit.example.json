@@ -1,0 +1,33 @@
+{
+  "evidenceId": "urn:helios:evidence:commit-governance:helios/example-policy-revision/1.0.0",
+  "subject": {
+    "resourceId": "helios/example-policy-revision",
+    "versionId": "1.0.0",
+    "transition": "draft->active",
+    "stage": "commit"
+  },
+  "evidenceType": "governance record",
+  "attestationStatus": "externally attested",
+  "collectedAt": "2026-05-09T13:04:00Z",
+  "observedAt": "2026-05-09T13:04:00Z",
+  "attestorId": "helios:attestor:registry-governance",
+  "attestedAt": "2026-05-09T13:04:30Z",
+  "validUntil": "2026-08-09T13:04:30Z",
+  "freshness": {
+    "policyContext": "helios:commit-governance-policy:v1",
+    "freshnessWindowDays": 92,
+    "state": "fresh"
+  },
+  "supportingEvidenceRefs": [
+    "urn:helios:evidence:proposal-criterion:helios/example-policy-revision/1.0.0",
+    "urn:helios:evidence:review-redacted:helios/example-policy-revision/1.0.0"
+  ],
+  "attestationDetails": {
+    "stewardCommitId": "urn:helios:commit:01HZHHH0000000000000000CMT",
+    "scopeCheck": "passed",
+    "criteriaCheck": "passed",
+    "reviewerRecommendation": "commit",
+    "redactionPolicyAcknowledged": "helios:redaction-policy:v1",
+    "summary": "Steward-attested commit-governance record. Confirms scope alignment, criterion satisfaction, reviewer recommendation, and acknowledgment of the redaction policy that governs the redacted reviewer evidence. Backs the draft->active lifecycle transition."
+  }
+}

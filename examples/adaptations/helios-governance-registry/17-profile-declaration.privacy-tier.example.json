@@ -1,0 +1,25 @@
+{
+  "profileId": "helios:profile:privacy-tier:v1",
+  "stewardId": "helios:steward:registry-governance",
+  "revision": "1",
+  "supportState": "supported",
+  "status": "active",
+  "baseConformance": "AGRP v1 baseline",
+  "additionalRequirements": [
+    "Reviewers operating under this profile MUST mark evidence-attestation entries that contain reviewer-restricted or steward-only content with metadata.redacted=true and a metadata.redactionPolicyRef pointing at helios:redaction-policy:v1.",
+    "Privacy-tier vocabulary defined by this profile: 'public' (default; surfaceable in any audit-record rationale), 'reviewer-restricted' (visible to reviewers and stewards; not surfaced in commit audit-record rationale), 'steward-only' (visible to stewards only; not surfaced in any audit-record rationale).",
+    "The redaction-policy URN helios:redaction-policy:v1 governs which fields within an evidence-attestation are subject to redaction; the policy is operated separately from this profile and may evolve independently of profile revisions.",
+    "Stewards MUST cite redacted evidence by evidenceId in commit audit-record evidenceRefs and MUST describe the resulting decision in non-content terms in rationale."
+  ],
+  "evidenceExpectations": [
+    "Each redacted evidence-attestation MUST retain its evidenceId, subject, evidenceType, attestationStatus, and timestamp fields per spec/compliance/evidence-freshness-and-attestation.md:60-89; only fields named in metadata.redactedFieldPaths may be replaced or omitted.",
+    "Steward-side commit-governance evidence-attestation MUST acknowledge the redaction policy by reference (attestationDetails.redactionPolicyAcknowledged) when reviewer evidence carries metadata.redacted=true.",
+    "The capability-advertisement MUST list this profile's profileId in profiles[] when the registry advertises support for redaction-marker evidence."
+  ],
+  "forbiddenBehaviors": [
+    "Surface redacted content in any audit-record rationale field.",
+    "Copy redacted-evidence content into the commit audit-record or the transition event payload.",
+    "Strip the metadata.redacted or metadata.redactionPolicyRef markers from a reviewer evidence-attestation when forwarding it to a downstream consumer.",
+    "Cite redacted evidence in evidenceRefs without preserving the original redaction markers on the cited evidence-attestation."
+  ]
+}

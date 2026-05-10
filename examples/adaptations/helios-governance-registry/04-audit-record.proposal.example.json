@@ -1,0 +1,12 @@
+{
+  "commitId": "urn:helios:commit:01HZHHH0000000000000000PRO",
+  "resourceId": "helios/example-policy-revision",
+  "versionId": "1.0.0",
+  "action": "create",
+  "actor": "helios:proposer:gov-drafting-team",
+  "rationale": "Proposal stage. Proposer helios:proposer:gov-drafting-team submits policy revision v1.0.0 for committee review. Proposal subjectArea (helios:subj:registry-governance), severityTier (recommended), and jurisdiction (helios:jurisdiction:registry-internal) are within the proposer's declared scope per helios:profile:proposer-scope:v1. Proposer attaches criterion-attestation evidence demonstrating that the proposal claims to satisfy helios:criterion:scope-validity:v1 and helios:criterion:severity-justification:v1. Awaiting reviewer evidence.",
+  "evidenceRefs": [
+    "urn:helios:evidence:proposal-criterion:helios/example-policy-revision/1.0.0"
+  ],
+  "createdAt": "2026-05-09T10:00:07Z"
+}

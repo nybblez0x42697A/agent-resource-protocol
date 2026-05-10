@@ -1,0 +1,50 @@
+{
+  "implementationId": "urn:helios:implementation:registry:01",
+  "conformance": "baseline",
+  "bindings": [
+    "https-json"
+  ],
+  "profiles": [
+    "helios:profile:proposer-scope:v1",
+    "helios:profile:privacy-tier:v1"
+  ],
+  "extensions": [
+    "helios:extension:proposer-vs-registrar-role-urn:v1",
+    "helios:extension:in-trace-redaction-marker:v1"
+  ],
+  "operations": [
+    "RegisterResourceVersion",
+    "GetRegistrationRecord",
+    "ListResourceVersions",
+    "TransitionLifecycleState",
+    "GetLineage",
+    "GetAuditRecord"
+  ],
+  "resourceKinds": [
+    "memory"
+  ],
+  "notes": {
+    "publishedAt": "2026-05-09T13:05:30Z",
+    "registryEndpoint": "https://registry.helios.example/v1/control-plane",
+    "discoverySurface": "https://registry.helios.example/v1/policy-revisions",
+    "currentlyAdvertisedPolicyRevisions": [
+      {
+        "resourceId": "helios/example-policy-revision",
+        "recommendedVersionId": "1.0.0",
+        "recommendedLifecycleState": "active",
+        "lineageVersionIds": ["1.0.0"],
+        "subjectArea": "helios:subj:registry-governance",
+        "severityTier": "recommended",
+        "jurisdiction": "helios:jurisdiction:registry-internal"
+      }
+    ],
+    "heliosKindVocabulary": [
+      "helios.policy-revision"
+    ],
+    "operatorRoleVocabulary": [
+      "helios:proposer:<id>",
+      "helios:reviewer:<id>",
+      "helios:steward:<id>"
+    ]
+  }
+}

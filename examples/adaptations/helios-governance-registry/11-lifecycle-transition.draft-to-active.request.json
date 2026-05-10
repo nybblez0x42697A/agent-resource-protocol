@@ -1,0 +1,16 @@
+{
+  "operation": "TransitionLifecycleState",
+  "requestId": "urn:helios:request:01HZHHH0000000000000000XIT",
+  "actor": "helios:steward:registry-governance",
+  "resourceId": "helios/example-policy-revision",
+  "versionId": "1.0.0",
+  "expectedVersionId": "1.0.0",
+  "fromState": "draft",
+  "toState": "active",
+  "rationale": "Transition draft->active for helios/example-policy-revision v1.0.0. Steward commit decision recorded at urn:helios:commit:01HZHHH0000000000000000CMT, supported by reviewer evidence at urn:helios:evidence:review-redacted:... (redacted-content entry referenced by evidenceId only) and proposer criterion-attestation at urn:helios:evidence:proposal-criterion:... A commit-stage governance evidence-attestation backs this transition.",
+  "evidenceRefs": [
+    "urn:helios:evidence:proposal-criterion:helios/example-policy-revision/1.0.0",
+    "urn:helios:evidence:review-redacted:helios/example-policy-revision/1.0.0",
+    "urn:helios:evidence:commit-governance:helios/example-policy-revision/1.0.0"
+  ]
+}

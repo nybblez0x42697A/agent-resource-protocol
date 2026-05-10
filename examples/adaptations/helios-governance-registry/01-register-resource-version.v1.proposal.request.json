@@ -1,0 +1,46 @@
+{
+  "operation": "RegisterResourceVersion",
+  "requestId": "urn:helios:request:01HZHHH0000000000000000PRO",
+  "actor": "helios:proposer:gov-drafting-team",
+  "registrationRecord": {
+    "resourceId": "helios/example-policy-revision",
+    "versionId": "1.0.0",
+    "resourceKind": "memory",
+    "status": "active",
+    "implementationRef": "https://registry.helios.example/policy-revisions/example-policy-revision/1.0.0/content",
+    "interfaceRef": "https://registry.helios.example/policy-revisions/example-policy-revision/interfaces/1.0.0.json",
+    "config": {
+      "renderingFormat": "markdown",
+      "consumerCacheSeconds": 3600
+    },
+    "stateDigest": "sha256:44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "metadata": {
+      "lifecycleState": "draft",
+      "heliosKind": "helios.policy-revision",
+      "displayName": "Example Policy Revision (Helios v1.0.0)",
+      "subjectArea": "helios:subj:registry-governance",
+      "severityTier": "recommended",
+      "jurisdiction": "helios:jurisdiction:registry-internal",
+      "evaluationCriteriaRefs": [
+        "helios:criterion:scope-validity:v1",
+        "helios:criterion:severity-justification:v1"
+      ],
+      "proposerScopeProfileRef": "helios:profile:proposer-scope:v1",
+      "registeredAt": "2026-05-09T10:00:05Z"
+    },
+    "lineageRef": "urn:helios:lineage:helios/example-policy-revision/1.0.0",
+    "auditRef": "urn:helios:commit:01HZHHH0000000000000000PRO"
+  },
+  "auditRecord": {
+    "commitId": "urn:helios:commit:01HZHHH0000000000000000PRO",
+    "resourceId": "helios/example-policy-revision",
+    "versionId": "1.0.0",
+    "action": "create",
+    "actor": "helios:proposer:gov-drafting-team",
+    "rationale": "Proposal of policy revision v1.0.0 (Example Policy Revision) submitted by helios:proposer:gov-drafting-team. Subject area helios:subj:registry-governance and severity tier recommended are within the proposer's declared scope per profile helios:profile:proposer-scope:v1. Proposal claims to satisfy criteria helios:criterion:scope-validity:v1 and helios:criterion:severity-justification:v1; criterion-attestation evidence attached.",
+    "evidenceRefs": [
+      "urn:helios:evidence:proposal-criterion:helios/example-policy-revision/1.0.0"
+    ],
+    "createdAt": "2026-05-09T10:00:05Z"
+  }
+}

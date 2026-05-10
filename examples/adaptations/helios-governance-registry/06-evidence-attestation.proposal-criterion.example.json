@@ -1,0 +1,44 @@
+{
+  "evidenceId": "urn:helios:evidence:proposal-criterion:helios/example-policy-revision/1.0.0",
+  "subject": {
+    "resourceId": "helios/example-policy-revision",
+    "versionId": "1.0.0",
+    "transition": "draft",
+    "stage": "proposal",
+    "evaluationCriteriaRefs": [
+      "helios:criterion:scope-validity:v1",
+      "helios:criterion:severity-justification:v1"
+    ]
+  },
+  "evidenceType": "governance record",
+  "attestationStatus": "self attested",
+  "collectedAt": "2026-05-09T10:00:00Z",
+  "observedAt": "2026-05-09T10:00:00Z",
+  "attestorId": "helios:proposer:gov-drafting-team",
+  "attestedAt": "2026-05-09T10:00:05Z",
+  "validUntil": "2026-08-09T10:00:05Z",
+  "freshness": {
+    "policyContext": "helios:criterion-attestation-policy:v1",
+    "freshnessWindowDays": 92,
+    "state": "fresh"
+  },
+  "supportingEvidenceRefs": [
+    "urn:helios:evidence:scope-self-check:helios/example-policy-revision/1.0.0",
+    "urn:helios:evidence:severity-self-check:helios/example-policy-revision/1.0.0"
+  ],
+  "attestationDetails": {
+    "criteriaSatisfied": [
+      {
+        "criterionRef": "helios:criterion:scope-validity:v1",
+        "claim": "Proposal subjectArea, severityTier, and jurisdiction are within proposer-declared scope per helios:profile:proposer-scope:v1.",
+        "selfAttested": true
+      },
+      {
+        "criterionRef": "helios:criterion:severity-justification:v1",
+        "claim": "Severity tier 'recommended' is justified by the proposal's effect class; severity tier was not escalated above the proposer's declared maximum.",
+        "selfAttested": true
+      }
+    ],
+    "stage": "proposal-time"
+  }
+}

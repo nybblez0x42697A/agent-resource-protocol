@@ -1,0 +1,11 @@
+{
+  "resourceId": "helios/example-policy-revision",
+  "versionId": "1.0.0",
+  "parentVersionId": null,
+  "mutationType": "create",
+  "commitId": "urn:helios:commit:01HZHHH0000000000000000XIT",
+  "createdAt": "2026-05-09T13:05:00Z",
+  "changeSummary": "Lineage node update for helios/example-policy-revision v1.0.0 after the steward-issued draft->active transition. The version identifier is unchanged at 1.0.0; what changed is the lifecycle state, recorded in the transition event (slot 12) and the transition audit-record (slot 14). This lineage node carries the committed-state lineage entry for v1.0.0 and remains the root of the lineage chain.",
+  "restoredFromVersionId": null,
+  "supersedesVersionId": null
+}

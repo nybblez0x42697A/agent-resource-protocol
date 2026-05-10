@@ -1,0 +1,29 @@
+{
+  "resourceKind": "memory",
+  "resourceId": "helios/example-policy-revision",
+  "versionId": "1.0.0",
+  "implementationRef": "https://registry.helios.example/policy-revisions/example-policy-revision/1.0.0/content",
+  "interfaceRef": "https://registry.helios.example/policy-revisions/example-policy-revision/interfaces/1.0.0.json",
+  "config": {
+    "renderingFormat": "markdown",
+    "consumerCacheSeconds": 3600
+  },
+  "state": {},
+  "metadata": {
+    "heliosKind": "helios.policy-revision",
+    "lifecycleState": "draft",
+    "displayName": "Example Policy Revision (Helios v1.0.0)",
+    "description": "Example governance policy revision exercised end-to-end through the Helios propose-review-commit arc. Subject area scoped to registry-internal governance; severity tier recommended.",
+    "subjectArea": "helios:subj:registry-governance",
+    "severityTier": "recommended",
+    "jurisdiction": "helios:jurisdiction:registry-internal",
+    "proposer": "helios:proposer:gov-drafting-team",
+    "createdAt": "2026-05-09T10:00:00Z",
+    "evaluationCriteriaRefs": [
+      "helios:criterion:scope-validity:v1",
+      "helios:criterion:severity-justification:v1"
+    ],
+    "proposerScopeProfileRef": "helios:profile:proposer-scope:v1",
+    "privacyTierProfileRef": "helios:profile:privacy-tier:v1"
+  }
+}

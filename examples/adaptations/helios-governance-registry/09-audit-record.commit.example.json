@@ -1,0 +1,13 @@
+{
+  "commitId": "urn:helios:commit:01HZHHH0000000000000000CMT",
+  "resourceId": "helios/example-policy-revision",
+  "versionId": "1.0.0",
+  "action": "update",
+  "actor": "helios:steward:registry-governance",
+  "rationale": "Commit decision. Steward helios:steward:registry-governance reviews the proposal and the reviewer's evidence-attestation (urn:helios:evidence:review-redacted:...). The reviewer evidence includes one redacted-content entry per helios:redaction-policy:v1; the steward weighs it by evidenceId without surfacing redacted fields. The proposer's criterion-attestation evidence (urn:helios:evidence:proposal-criterion:...) supports the proposal's claim to satisfy the attached criteria. Decision: commit. The lifecycle transition draft->active is recorded in a separate transition request and event; this audit-record captures the commit decision itself, immediately preceding the transition. Redacted content is not copied into this rationale per helios:profile:privacy-tier:v1.",
+  "evidenceRefs": [
+    "urn:helios:evidence:proposal-criterion:helios/example-policy-revision/1.0.0",
+    "urn:helios:evidence:review-redacted:helios/example-policy-revision/1.0.0"
+  ],
+  "createdAt": "2026-05-09T13:00:00Z"
+}

@@ -1,0 +1,12 @@
+{
+  "commitId": "urn:helios:commit:01HZHHH0000000000000000RJX",
+  "resourceId": "helios/hypothetical-out-of-scope-revision",
+  "versionId": "0.1.0",
+  "action": "create",
+  "actor": "helios:steward:registry-governance",
+  "rationale": "Rejection of hypothetical proposal helios/hypothetical-out-of-scope-revision v0.1.0 submitted by helios:proposer:gov-drafting-team. Proposal violates declared proposer-scope per helios:profile:proposer-scope:v1: proposed subjectArea 'helios:subj:reviewer-conduct' is outside the proposer's declared subjectArea set (which lists only 'helios:subj:registry-governance' and 'helios:subj:proposer-onboarding'). Forbidden-behavior triggered: 'Propose changes outside the proposer\\u2019s declared subjectArea.' Proposal does not advance from draft; rejection recorded for audit chain. Resubmission requires the proposer to either (a) submit through a proposer with the appropriate declared scope, or (b) extend the proposer's declared scope via a separate profile-declaration revision before resubmitting.",
+  "evidenceRefs": [
+    "urn:helios:evidence:scope-violation-finding:helios/hypothetical-out-of-scope-revision/0.1.0"
+  ],
+  "createdAt": "2026-05-09T14:30:00Z"
+}

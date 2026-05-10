@@ -1,0 +1,11 @@
+{
+  "resourceId": "helios/example-policy-revision",
+  "versionId": "1.0.0",
+  "parentVersionId": null,
+  "mutationType": "create",
+  "commitId": "urn:helios:commit:01HZHHH0000000000000000PRO",
+  "createdAt": "2026-05-09T10:00:07Z",
+  "changeSummary": "Initial draft-state lineage node for helios/example-policy-revision. Root of the lineage chain; no parent version. Created at proposal time by helios:proposer:gov-drafting-team. Lifecycle state remains draft until the steward commits via a separate draft->active transition; the propose->review->commit operator arc is recorded in the audit-record stream rather than as additional lineage nodes during the draft-state annotation cycle.",
+  "restoredFromVersionId": null,
+  "supersedesVersionId": null
+}

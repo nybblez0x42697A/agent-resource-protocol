@@ -1,0 +1,12 @@
+{
+  "commitId": "urn:helios:commit:01HZHHH0000000000000000REV",
+  "resourceId": "helios/example-policy-revision",
+  "versionId": "1.0.0",
+  "action": "create",
+  "actor": "helios:reviewer:gov-review-committee",
+  "rationale": "Review stage. Reviewer helios:reviewer:gov-review-committee evaluates the draft against the criteria the proposer attached at proposal time (helios:criterion:scope-validity:v1, helios:criterion:severity-justification:v1). Reviewer recommendation: commit. Review evidence-attestation includes one redacted entry per helios:redaction-policy:v1; redacted content is referenced by evidenceId but not surfaced in this audit-record's rationale. Resource state remains draft pending steward commit decision.",
+  "evidenceRefs": [
+    "urn:helios:evidence:review-redacted:helios/example-policy-revision/1.0.0"
+  ],
+  "createdAt": "2026-05-09T11:30:00Z"
+}

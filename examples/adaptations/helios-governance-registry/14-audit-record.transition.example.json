@@ -1,0 +1,12 @@
+{
+  "commitId": "urn:helios:commit:01HZHHH0000000000000000XIT",
+  "resourceId": "helios/example-policy-revision",
+  "versionId": "1.0.0",
+  "action": "update",
+  "actor": "helios:steward:registry-governance",
+  "rationale": "Lifecycle transition draft->active for helios/example-policy-revision v1.0.0. Backed by commit-governance evidence-attestation urn:helios:evidence:commit-governance:... signed by helios:attestor:registry-governance on 2026-05-09T13:04:30Z. Audit-record action 'update' is used because 'transition' is not a value in the audit-record action enum; this matches the precedent set by Northstar slot 13 and Pinecrest slot 13.",
+  "evidenceRefs": [
+    "urn:helios:evidence:commit-governance:helios/example-policy-revision/1.0.0"
+  ],
+  "createdAt": "2026-05-09T13:05:01Z"
+}

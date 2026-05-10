@@ -1,0 +1,47 @@
+{
+  "evidenceId": "urn:helios:evidence:review-redacted:helios/example-policy-revision/1.0.0",
+  "subject": {
+    "resourceId": "helios/example-policy-revision",
+    "versionId": "1.0.0",
+    "transition": "draft",
+    "stage": "review",
+    "evaluationCriteriaRefs": [
+      "helios:criterion:scope-validity:v1",
+      "helios:criterion:severity-justification:v1"
+    ]
+  },
+  "evidenceType": "governance record",
+  "attestationStatus": "externally attested",
+  "collectedAt": "2026-05-09T11:00:00Z",
+  "observedAt": "2026-05-09T11:00:00Z",
+  "attestorId": "helios:reviewer:gov-review-committee",
+  "attestedAt": "2026-05-09T11:30:00Z",
+  "validUntil": "2026-06-09T11:30:00Z",
+  "freshness": {
+    "policyContext": "helios:review-attestation-policy:v1",
+    "freshnessWindowDays": 31,
+    "state": "fresh"
+  },
+  "supportingEvidenceRefs": [
+    "urn:helios:evidence:scope-review-finding:helios/example-policy-revision/1.0.0",
+    "urn:helios:evidence:severity-review-finding:helios/example-policy-revision/1.0.0",
+    "urn:helios:evidence:committee-deliberation:helios/example-policy-revision/1.0.0"
+  ],
+  "metadata": {
+    "redacted": true,
+    "redactionPolicyRef": "helios:redaction-policy:v1",
+    "privacyTierProfileRef": "helios:profile:privacy-tier:v1",
+    "redactedFieldPaths": [
+      "/attestationDetails/deliberationNotes",
+      "/attestationDetails/dissentSummary"
+    ],
+    "redactionRationale": "Deliberation notes and dissent summary contain reviewer-restricted content per helios:profile:privacy-tier:v1. Content removed; structural references retained so the steward can cite this evidence by evidenceId without surfacing redacted fields."
+  },
+  "attestationDetails": {
+    "scopeFindingsSummary": "Scope-validity finding: proposal subjectArea, severityTier, and jurisdiction are within proposer's declared scope per helios:profile:proposer-scope:v1.",
+    "severityFindingsSummary": "Severity-justification finding: severity tier 'recommended' is appropriate; no escalation outside declared scope.",
+    "deliberationNotes": "[REDACTED per helios:redaction-policy:v1]",
+    "dissentSummary": "[REDACTED per helios:redaction-policy:v1]",
+    "recommendation": "commit"
+  }
+}

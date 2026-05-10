@@ -1,0 +1,30 @@
+{
+  "resourceId": "helios/example-policy-revision",
+  "versionId": "1.0.0",
+  "resourceKind": "memory",
+  "status": "active",
+  "implementationRef": "https://registry.helios.example/policy-revisions/example-policy-revision/1.0.0/content",
+  "interfaceRef": "https://registry.helios.example/policy-revisions/example-policy-revision/interfaces/1.0.0.json",
+  "config": {
+    "renderingFormat": "markdown",
+    "consumerCacheSeconds": 3600
+  },
+  "stateDigest": "sha256:44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+  "metadata": {
+    "lifecycleState": "draft",
+    "heliosKind": "helios.policy-revision",
+    "displayName": "Example Policy Revision (Helios v1.0.0)",
+    "subjectArea": "helios:subj:registry-governance",
+    "severityTier": "recommended",
+    "jurisdiction": "helios:jurisdiction:registry-internal",
+    "evaluationCriteriaRefs": [
+      "helios:criterion:scope-validity:v1",
+      "helios:criterion:severity-justification:v1"
+    ],
+    "proposerScopeProfileRef": "helios:profile:proposer-scope:v1",
+    "privacyTierProfileRef": "helios:profile:privacy-tier:v1",
+    "registeredAt": "2026-05-09T10:00:05Z"
+  },
+  "lineageRef": "urn:helios:lineage:helios/example-policy-revision/1.0.0",
+  "auditRef": "urn:helios:commit:01HZHHH0000000000000000PRO"
+}

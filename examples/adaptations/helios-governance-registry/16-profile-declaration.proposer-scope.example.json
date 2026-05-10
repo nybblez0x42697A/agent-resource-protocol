@@ -1,0 +1,25 @@
+{
+  "profileId": "helios:profile:proposer-scope:v1",
+  "stewardId": "helios:steward:registry-governance",
+  "revision": "1",
+  "supportState": "supported",
+  "status": "active",
+  "baseConformance": "AGRP v1 baseline",
+  "additionalRequirements": [
+    "Proposers operating under this profile MUST declare a scope tuple (subjectArea, severityTier, jurisdiction) at registration time on registration-record metadata before submitting a candidate revision.",
+    "Proposers MUST attach evaluationCriteriaRefs on the registration-record metadata at proposal time naming the criteria the proposal claims to satisfy.",
+    "Proposer-declared scope dimensions for this profile: subjectArea (one of helios:subj:registry-governance, helios:subj:proposer-onboarding, helios:subj:reviewer-conduct), severityTier (one of informational, recommended, required), jurisdiction (one of helios:jurisdiction:registry-internal, helios:jurisdiction:registry-federation).",
+    "Proposers MUST NOT submit candidate revisions outside their own declared scope; the steward will reject out-of-scope proposals with a rejection audit-record naming the violated invariant in rationale."
+  ],
+  "evidenceExpectations": [
+    "Proposer-side criterion-attestation evidence at proposal time, conforming to the prose-defined evidence shape at spec/compliance/evidence-freshness-and-attestation.md:60-89, naming the satisfied criteria in attestationDetails.",
+    "Reviewer-side review-evidence evidence-attestation at review time, naming the reviewer in attestorId and recommending commit or rejection in attestationDetails.recommendation.",
+    "Steward-side commit-governance evidence-attestation at commit time, confirming scope check, criteria check, and reviewer recommendation."
+  ],
+  "forbiddenBehaviors": [
+    "Propose changes outside the proposer's declared subjectArea.",
+    "Escalate severityTier above the proposer's declared maximum without attaching an additional criterion-attestation justifying the escalation.",
+    "Submit a proposal whose jurisdiction is outside the proposer's declared jurisdiction set.",
+    "Re-submit a draft that the steward has rejected without addressing the violated invariant named in the rejection rationale."
+  ]
+}

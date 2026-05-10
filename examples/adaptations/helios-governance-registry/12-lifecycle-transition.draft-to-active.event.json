@@ -1,0 +1,13 @@
+{
+  "resourceId": "helios/example-policy-revision",
+  "versionId": "1.0.0",
+  "actor": "helios:steward:registry-governance",
+  "expectedVersionId": "1.0.0",
+  "fromState": "draft",
+  "toState": "active",
+  "rationale": "Lifecycle transition draft->active for helios/example-policy-revision v1.0.0. Steward commit decision at urn:helios:commit:01HZHHH0000000000000000CMT. Reviewer evidence (urn:helios:evidence:review-redacted:...) included one redacted-content entry per helios:redaction-policy:v1; redacted content is referenced by evidenceId without being surfaced here. Commit-stage governance evidence-attestation issued by helios:attestor:registry-governance on 2026-05-09T13:04:30Z.",
+  "evidenceRefs": [
+    "urn:helios:evidence:commit-governance:helios/example-policy-revision/1.0.0"
+  ],
+  "restoredFromVersionId": null
+}
