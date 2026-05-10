@@ -65,6 +65,24 @@ The `Future Introduction Rule` defers `SEPL` standardization wholesale. Four `SE
 
 These four concerns remain deferred from the protocol standard. All other `SEPL` concerns likewise remain deferred under the `Future Introduction Rule` above; this section sharpens the deferral surface for the four concerns named here without altering that rule.
 
+## SEPL-08 Operator Extension Model Opened Via Release Boundary
+
+This section discharges the `Future Introduction Rule` at lines 49 to 55 above for one specific `SEPL` concern: `SEPL-08`, the operator extension model.
+
+`AGRP v1` opens `SEPL-08` — named at `docs/audits/sepl-coverage-matrix.md:48` and routed to the release-boundary path at `docs/audits/sepl-opening-decision.md:29` and `docs/audits/sepl-scope-audit.md:133` — by identifying `models/schemas/capability-advertisement.schema.json#/extensions` (the `extensions` array declared at line 22 and listed in the schema's required array at line 55) as the `SEPL-08 v1` included artifact.
+
+The compatibility class for this opening is `additive` per `spec/versioning/versioning-and-evolution-policy.md:121, :131-139`. This opening is not `release-boundary-defining`.
+
+Pre-existing `AGRP v1` implementations remain conformant: implementations that emit no `extensions` field content, that emit an empty `extensions: []` array, or that emit any prior namespaced extension identifier are unchanged by this opening, and no prior `AGRP v1` conformance claim is invalidated.
+
+The normative declaration shape for `SEPL-08` operator extensions, together with the direct evidence already present in the corpus, is codified in `spec/sepl/operator-extension-model.md`. Direct evidence is exhibited by:
+
+- `examples/adaptations/northstar-tool-registry/14-capability-advertisement.example.json#/extensions`
+- `examples/adaptations/pinecrest-data-products/14-capability-advertisement.example.json#/extensions`
+- `examples/adaptations/helios-governance-registry/15-capability-advertisement.example.json#/extensions`
+
+This opening is scoped to `SEPL-08` only. All other `SEPL` concerns remain deferred under the `Future Introduction Rule` above and the `Sharpened Deferral For Specific SEPL Concerns` section between this section and that rule; this opening does not alter their disposition.
+
 ## Relationship To AGRP v1
 
 `AGRP v1` should be interpreted as:
