@@ -20,6 +20,16 @@ AGRP v1.0.0 was published on 2026-05-03 as the annotated tag `agrp-v1.0.0` on th
 
 Conformance against v1.0.0 is checked by `python3 tools/conformance/run_conformance_vectors.py`, which validates 19 fixtures under `examples/conformance-vectors/`. A reference adaptation lives at `docs/adaptations/northstar-tool-registry.md` (design narrative) and `examples/adaptations/northstar-tool-registry/` (concrete artifact bundle); an executable replay of that bundle is at `tools/adaptations/replay-northstar.py`.
 
+## Quickstart
+
+For a single-command end-to-end check of the v1 corpus and the three reference adaptation bundles, run:
+
+```
+python3 tools/validate-all.py
+```
+
+This walks the 19 conformance vectors plus all 50 artifacts across the Northstar, Pinecrest, and Helios bundles (69 items total), prints per-artifact `ok` / `ok-prose` / `not ok` lines, and exits 0 when every stage is green. See `docs/getting-started.md` for the full adopter workflow, including how to author a `manifest.json` for your own bundle.
+
 ## Scope
 
 This repository is for:

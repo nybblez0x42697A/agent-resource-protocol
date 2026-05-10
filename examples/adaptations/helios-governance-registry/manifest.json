@@ -1,0 +1,25 @@
+{
+  "bundle": "helios-governance-registry",
+  "designDoc": "docs/adaptations/helios-governance-registry.md",
+  "artifacts": [
+    {"file": "00-policy-revision-resource.v1.example.json", "validation": "schema", "schema": "models/schemas/resource-entity.schema.json"},
+    {"file": "01-register-resource-version.v1.proposal.request.json", "validation": "schema", "schema": "models/schemas/control-plane-envelope.schema.json"},
+    {"file": "02-register-resource-version.v1.proposal.response.json", "validation": "schema", "schema": "models/schemas/control-plane-envelope.schema.json"},
+    {"file": "03-registration-record.v1.proposal.example.json", "validation": "schema", "schema": "models/schemas/registration-record.schema.json"},
+    {"file": "04-audit-record.proposal.example.json", "validation": "schema", "schema": "models/schemas/audit-record.schema.json"},
+    {"file": "05-lineage-node.v1.draft.example.json", "validation": "schema", "schema": "models/schemas/lineage-node.schema.json"},
+    {"file": "06-evidence-attestation.proposal-criterion.example.json", "validation": "prose", "proseRef": "spec/compliance/evidence-freshness-and-attestation.md:60-89"},
+    {"file": "07-audit-record.review.example.json", "validation": "schema", "schema": "models/schemas/audit-record.schema.json"},
+    {"file": "08-evidence-attestation.review.redacted.example.json", "validation": "prose", "proseRef": "spec/compliance/evidence-freshness-and-attestation.md:60-89"},
+    {"file": "09-audit-record.commit.example.json", "validation": "schema", "schema": "models/schemas/audit-record.schema.json"},
+    {"file": "10-lineage-node.v1.committed.example.json", "validation": "schema", "schema": "models/schemas/lineage-node.schema.json"},
+    {"file": "11-lifecycle-transition.draft-to-active.request.json", "validation": "schema", "schema": "models/schemas/control-plane-envelope.schema.json"},
+    {"file": "12-lifecycle-transition.draft-to-active.event.json", "validation": "schema", "schema": "models/schemas/lifecycle-transition.schema.json"},
+    {"file": "13-evidence-attestation.commit.example.json", "validation": "prose", "proseRef": "spec/compliance/evidence-freshness-and-attestation.md:60-89"},
+    {"file": "14-audit-record.transition.example.json", "validation": "schema", "schema": "models/schemas/audit-record.schema.json"},
+    {"file": "15-capability-advertisement.example.json", "validation": "schema", "schema": "models/schemas/capability-advertisement.schema.json"},
+    {"file": "16-profile-declaration.proposer-scope.example.json", "validation": "schema", "schema": "models/schemas/profile-declaration.schema.json"},
+    {"file": "17-profile-declaration.privacy-tier.example.json", "validation": "schema", "schema": "models/schemas/profile-declaration.schema.json"},
+    {"file": "18-audit-record.rejection.example.json", "validation": "schema", "schema": "models/schemas/audit-record.schema.json"}
+  ]
+}
