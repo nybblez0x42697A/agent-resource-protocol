@@ -63,3 +63,38 @@ for the clarifying note on that split.
 | `narrow-and-defer` | 4 | SEPL-02, SEPL-03, SEPL-05, SEPL-06 |
 
 The dispositional shape (1 open / 4 narrow-and-defer / 3 needs-targeted-adaptation / 0 sharpen-defer) is what `docs/audits/sepl-scope-audit.md` §6 walks narratively, and what §7 + §8 + the closure-state decision document use to recommend a whole-audit closure state.
+
+## Post-opening evidence refresh
+
+As of 2026-05-10, three normative changes have shipped that extend the evidence base reflected in §2 above. Disposition values and coverage verdicts in the table at line 39 are unchanged by this refresh; this section extends the rationale base by recording what evidence has been added to the corpus since the original audit closure on 2026-05-07.
+
+### 4.1 SEPL-01, SEPL-04, SEPL-07 — Helios bundle direct evidence
+
+The 0055 increment authored a third reference adaptation, `docs/adaptations/helios-governance-registry.md`, with a 19-artifact bundle under `examples/adaptations/helios-governance-registry/`. Per the design doc's `## 11. Gaps and limitations` section, the bundle exercises three SEPL surfaces:
+
+- SEPL-01 (candidate-change proposal envelope) — surfaced by bundle slots 01 / 02 / 03 / 04 / 06 (proposal arc with proposer URN on `actor`, criterion-reference attachment at proposal time) plus slots 09 / 11 / 14 (commit and transition with steward URN, demonstrating the propose-vs-registrar role split).
+- SEPL-04 (operator-contract preconditions and failure modes) — surfaced by slot 16 (`profile-declaration.proposer-scope.example.json` with scope tuple in `additionalRequirements` and negative invariants in `forbiddenBehaviors`) plus slot 18 (`audit-record.rejection.example.json` with concrete out-of-scope reason in `rationale`).
+- SEPL-07 (privacy / redaction boundaries for self-evolution traces) — surfaced by slot 08 (`evidence-attestation.review.redacted.example.json` with `metadata.redacted: true` and `metadata.redactionPolicyRef`), slot 17 (`profile-declaration.privacy-tier.example.json`), slot 09 (commit `audit-record.rationale` describing the decision in non-content terms), and slot 07 (reviewer audit-record).
+
+### 4.2 SEPL-02, SEPL-03, SEPL-05, SEPL-06 — charter sharpening
+
+The 0054 increment added a new section to `spec/charter/sepl-v1-deferral.md`, `Sharpened Deferral For Specific SEPL Concerns`, naming SEPL-02, SEPL-03, SEPL-05, and SEPL-06 explicitly as concerns whose deferral surface is now sharpened under the existing wholesale framework. The four concerns retain the `narrow-and-defer` disposition shown in the table; the sharpening codifies what each concern's deferred surface includes.
+
+### 4.3 SEPL-08 — release-boundary opening
+
+The 0053 increment opened the SEPL-08 slice via the release-boundary path at `spec/charter/sepl-v1-deferral.md:49-55`. Two normative artifacts landed: a charter section `SEPL-08 Operator Extension Model Opened Via Release Boundary` (which identifies `models/schemas/capability-advertisement.schema.json#/extensions` as the SEPL-08 v1 included artifact and classifies the change as `additive`) and a new spec/sepl/ file `spec/sepl/operator-extension-model.md` (which codifies the operator-extension declaration shape). The Helios bundle's slot 15 capability-advertisement carries two `:v1` extensions, joining the Northstar and Pinecrest direct evidence already cited in the row at line 48.
+
+### 4.4 Verdict + disposition status
+
+| Concern | Verdict | Disposition | Execution status |
+|---------|---------|-------------|------------------|
+| SEPL-01 | `adjacent-evidenced` | `needs-targeted-adaptation` | Helios direct evidence shipped 2026-05-09 (0055) |
+| SEPL-02 | `adjacent-evidenced` | `narrow-and-defer` | charter sharpening shipped 2026-05-08 (0054) |
+| SEPL-03 | `adjacent-evidenced` | `narrow-and-defer` | charter sharpening shipped 2026-05-08 (0054) |
+| SEPL-04 | `adjacent-evidenced` | `needs-targeted-adaptation` | Helios direct evidence shipped 2026-05-09 (0055) |
+| SEPL-05 | `adjacent-evidenced` | `narrow-and-defer` | charter sharpening shipped 2026-05-08 (0054) |
+| SEPL-06 | `adjacent-evidenced` | `narrow-and-defer` | charter sharpening shipped 2026-05-08 (0054) |
+| SEPL-07 | `adjacent-evidenced` | `needs-targeted-adaptation` | Helios direct evidence shipped 2026-05-09 (0055) |
+| SEPL-08 | `direct-evidenced` | `open-via-release-boundary` | release-boundary opening shipped 2026-05-10 (0053) |
+
+Verdict and disposition values are unchanged from the table at line 39. The execution-status column above is the new content this refresh adds.

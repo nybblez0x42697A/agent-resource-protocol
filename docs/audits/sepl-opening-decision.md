@@ -33,3 +33,28 @@ Three coordinated follow-up increments fall out of the hybrid decision. The slug
 - **`0055-agrp-sepl-targeted-adaptation-third-domain`** — Targeted third reference adaptation against a self-evolution-shaped synthetic domain, designed to evidence SEPL-01, SEPL-04, and SEPL-07 before any release-boundary work on those rows.
 
 Slug numbers are placeholders and may shift if other increments are scheduled before them; any future renumbering propagates to both this document and `docs/audits/sepl-scope-audit.md` §9 together.
+
+## 4. Post-opening evidence refresh
+
+As of 2026-05-10, the three follow-up increments named in §3 above have all shipped. This section records that execution status. The hybrid closure state declared in §1 above and the rationale in §2 above are unchanged by this refresh; the architectural decision recorded at 0052 closure remains the canonical decision. This section adds supporting prose only.
+
+### 4.1 Follow-up slate executed
+
+All three slugs in §3 above have been delivered:
+
+- `0054-agrp-sepl-deferral-charter-sharpening` shipped on 2026-05-08, adding the `Sharpened Deferral For Specific SEPL Concerns` section to `spec/charter/sepl-v1-deferral.md` (naming SEPL-02, SEPL-03, SEPL-05, SEPL-06).
+- `0055-agrp-sepl-targeted-adaptation-third-domain` shipped on 2026-05-09, authoring the third reference adaptation `docs/adaptations/helios-governance-registry.md` plus the 19-artifact bundle at `examples/adaptations/helios-governance-registry/` (surfacing direct evidence for SEPL-01, SEPL-04, SEPL-07).
+- `0053-agrp-sepl-operator-extension-release-boundary-decision` shipped on 2026-05-10, opening the SEPL-08 slice via the release-boundary path with the new charter section `SEPL-08 Operator Extension Model Opened Via Release Boundary` and the new file `spec/sepl/operator-extension-model.md`.
+
+### 4.2 Hybrid closure state realized
+
+The three reasons §2 records as supporting the hybrid decision have all been realized in the corpus. The SEPL-08 slice has travelled the release-boundary path. The four `narrow-and-defer` rows have audit-anchored charter sharpening. The three `needs-targeted-adaptation` rows have direct evidence from a targeted third reference adaptation. The hybrid decision is unchanged; the increments named in §3 above have executed it.
+
+### 4.3 Companion audit refreshes
+
+This refresh is paired with parallel addenda in the companion audit files:
+
+- `docs/audits/sepl-coverage-matrix.md` `## Post-opening evidence refresh` — records per-row evidence updates and execution-status table.
+- `docs/audits/sepl-scope-audit.md` `## 10. Post-opening evidence refresh` — records narrative updates against the §6 verdict groupings, §7 closure-state subsections, and §9 follow-up slate.
+
+The disposition vocabulary, verdict vocabulary, and `hybrid` closure-state vocabulary are unchanged across all three refreshed files. This addendum extends the rationale base; it does not redefine terms or revise prior decisions.
