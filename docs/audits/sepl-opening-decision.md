@@ -58,3 +58,16 @@ This refresh is paired with parallel addenda in the companion audit files:
 - `docs/audits/sepl-scope-audit.md` `## 10. Post-opening evidence refresh` — records narrative updates against the §6 verdict groupings, §7 closure-state subsections, and §9 follow-up slate.
 
 The disposition vocabulary, verdict vocabulary, and `hybrid` closure-state vocabulary are unchanged across all three refreshed files. This addendum extends the rationale base; it does not redefine terms or revise prior decisions.
+
+## 5. Sequencing decision for SEPL-01..07
+
+After the 0056 audit-layer refresh, a sequencing assessment was
+authored for the seven `SEPL` concerns remaining after `SEPL-08`
+opened. That assessment lives at
+`docs/audits/sepl-next-opening-sequencing-decision.md` as a
+companion document; it records, per concern, whether the
+post-0056 evidence base is sufficient to route the slice through
+a release-boundary increment.
+
+The hybrid closure declared in §1 above is unchanged by that
+sequencing assessment.
