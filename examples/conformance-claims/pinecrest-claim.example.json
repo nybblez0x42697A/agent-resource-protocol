@@ -1,0 +1,52 @@
+{
+  "claimVersion": "1",
+  "claimedBy": {
+    "system": "Pinecrest Data Products",
+    "organization": "Example Adopter Organization"
+  },
+  "claimedAt": "2026-05-10T20:00:00Z",
+  "agrpVersion": "v1",
+  "conformanceLevel": "baseline",
+  "claimElements": [
+    {
+      "element": "semantic-alignment",
+      "evidence": "Data-product resources, registration records, lineage nodes, audit records, lifecycle transitions, and consumer-trust profile declarations are all schema-valid; see examples/adaptations/pinecrest-data-products/manifest.json"
+    },
+    {
+      "element": "schema-compatibility",
+      "evidence": "15 of 16 bundle artifacts are JSON-Schema-validated against the seven baseline schemas; the 16th (evidence-attestation) is prose-validated per the evidence-attestation contract"
+    },
+    {
+      "element": "lifecycle-lineage-restore-audit-preservation",
+      "evidence": "Lineage chain across data-product versions, audit records at each step, lifecycle transition draft to active and active to deprecated. See docs/adaptations/pinecrest-data-products.md."
+    },
+    {
+      "element": "transport-neutral-control-plane-preservation",
+      "evidence": "RegisterResourceVersion and TransitionLifecycleState envelopes are JSON-on-the-wire shapes; transport binding is left to the adopter and does not affect AGRP-side conformance"
+    }
+  ],
+  "schemasInScope": [
+    "models/schemas/resource-entity.schema.json",
+    "models/schemas/registration-record.schema.json",
+    "models/schemas/lineage-node.schema.json",
+    "models/schemas/audit-record.schema.json",
+    "models/schemas/lifecycle-transition.schema.json",
+    "models/schemas/profile-declaration.schema.json",
+    "models/schemas/control-plane-envelope.schema.json"
+  ],
+  "operationsInScope": [
+    "RegisterResourceVersion",
+    "TransitionLifecycleState"
+  ],
+  "errorCategoriesInScope": [
+    "validation_error",
+    "not_found",
+    "conflict",
+    "policy_denied"
+  ],
+  "bundleReference": {
+    "path": "examples/adaptations/pinecrest-data-products",
+    "designDoc": "docs/adaptations/pinecrest-data-products.md",
+    "manifest": "examples/adaptations/pinecrest-data-products/manifest.json"
+  }
+}

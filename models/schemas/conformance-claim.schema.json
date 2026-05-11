@@ -1,0 +1,152 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agent-resource-protocol.dev/schemas/conformance-claim.schema.json",
+  "title": "Adopter Conformance Claim",
+  "type": "object",
+  "properties": {
+    "claimVersion": {
+      "type": "string",
+      "const": "1"
+    },
+    "claimedBy": {
+      "type": "object",
+      "properties": {
+        "system": {
+          "$ref": "./common.schema.json#/$defs/identifier"
+        },
+        "organization": {
+          "$ref": "./common.schema.json#/$defs/identifier"
+        }
+      },
+      "required": [
+        "system",
+        "organization"
+      ],
+      "additionalProperties": false
+    },
+    "claimedAt": {
+      "$ref": "./common.schema.json#/$defs/timestamp"
+    },
+    "agrpVersion": {
+      "type": "string",
+      "const": "v1"
+    },
+    "conformanceLevel": {
+      "type": "string",
+      "enum": [
+        "baseline"
+      ]
+    },
+    "claimElements": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "element": {
+            "type": "string",
+            "enum": [
+              "semantic-alignment",
+              "schema-compatibility",
+              "lifecycle-lineage-restore-audit-preservation",
+              "transport-neutral-control-plane-preservation"
+            ]
+          },
+          "evidence": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "element",
+          "evidence"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "schemasInScope": {
+      "$ref": "./common.schema.json#/$defs/stringArray"
+    },
+    "operationsInScope": {
+      "$ref": "./common.schema.json#/$defs/stringArray"
+    },
+    "errorCategoriesInScope": {
+      "$ref": "./common.schema.json#/$defs/stringArray"
+    },
+    "bundleReference": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "$ref": "./common.schema.json#/$defs/identifier"
+        },
+        "designDoc": {
+          "$ref": "./common.schema.json#/$defs/identifier"
+        },
+        "manifest": {
+          "$ref": "./common.schema.json#/$defs/identifier"
+        }
+      },
+      "required": [
+        "path",
+        "designDoc"
+      ],
+      "additionalProperties": false
+    },
+    "attestation": {
+      "type": "object",
+      "properties": {
+        "evidenceId": {
+          "$ref": "./common.schema.json#/$defs/identifier"
+        },
+        "subject": {
+          "$ref": "./common.schema.json#/$defs/identifier"
+        },
+        "evidenceType": {
+          "$ref": "./common.schema.json#/$defs/identifier"
+        },
+        "attestationStatus": {
+          "type": "string",
+          "enum": [
+            "unattested",
+            "self-attested",
+            "externally-attested"
+          ]
+        },
+        "observedAt": {
+          "$ref": "./common.schema.json#/$defs/timestamp"
+        },
+        "collectedAt": {
+          "$ref": "./common.schema.json#/$defs/timestamp"
+        },
+        "attestorId": {
+          "$ref": "./common.schema.json#/$defs/identifier"
+        },
+        "attestedAt": {
+          "$ref": "./common.schema.json#/$defs/timestamp"
+        },
+        "validUntil": {
+          "$ref": "./common.schema.json#/$defs/timestamp"
+        }
+      },
+      "required": [
+        "evidenceId",
+        "subject",
+        "evidenceType",
+        "attestationStatus"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "claimVersion",
+    "claimedBy",
+    "claimedAt",
+    "agrpVersion",
+    "conformanceLevel",
+    "claimElements",
+    "schemasInScope",
+    "operationsInScope",
+    "errorCategoriesInScope",
+    "bundleReference"
+  ],
+  "additionalProperties": false
+}

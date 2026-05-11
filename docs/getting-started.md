@@ -154,12 +154,14 @@ its `reports/` directory, but the green state is not enforced
 on every commit through GitHub Actions or similar. Adding CI is
 a deferred follow-up.
 
-A few smaller items are also deferred: a published adopter
-conformance-claim template (so adopters can publish a small JSON
-claim alongside their bundle); per-bundle replay scripts for
+One smaller item is also deferred: per-bundle replay scripts for
 Pinecrest and Helios mirroring `tools/adaptations/replay-northstar.py`
 (the existing Northstar replay walks the lifecycle in memory and
 checks eight invariants, deeper than the generic shape validator).
+The previously-deferred adopter conformance-claim template is now
+shipped at `spec/conformance/conformance-claim-template.md` with
+a JSON schema at `models/schemas/conformance-claim.schema.json`
+and three worked examples under `examples/conformance-claims/`.
 
 ## Where to go next
 
@@ -172,6 +174,11 @@ checks eight invariants, deeper than the generic shape validator).
   profile-declaration.
 - `spec/conformance/baseline-conformance.md` — the AGRP v1
   baseline-conformance claim shape.
+- `spec/conformance/conformance-claim-template.md` — the
+  supplementary adopter-facing template for publishing a
+  conformance claim alongside your bundle. Optional; see
+  `examples/conformance-claims/` for three worked examples
+  (Northstar, Pinecrest, Helios).
 - `docs/release-publication/agrp-v1.0.0-announcement.md` — the v1
   release notes and artifact-set summary.
 - `tools/adaptations/replay-northstar.py` — the deeper narrative
