@@ -33,12 +33,21 @@ Known limitation (documented in docs/getting-started.md):
 Runtime: Python 3 stdlib only.
 """
 
+import re
 import subprocess
 import sys
 from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parent.parent
+
+# TAP-style result-line classifiers. Anchored patterns require result-line
+# shape (TAP-numbered, bundle-path slash form, or conformance bare-token
+# form), so child-tool summary lines (`<bundle>: K ok / F failed (...)`)
+# and stage headers cannot collide with result counts.
+_SCHEMA_OK_RE = re.compile(r"^ok \d+ - .+|^ok [^:\s]+/.+|^ok [^:\s]+$")
+_PROSE_OK_RE = re.compile(r"^ok-prose [^:\s]+/.+")
+_FAIL_RE = re.compile(r"^not ok \d+ - .+|^not ok [^:\s]+/.+: .+")
 
 STAGES = [
     {
@@ -87,18 +96,18 @@ def run_stage(index, stage):
     if proc.stderr:
         sys.stderr.write(proc.stderr)
 
-    # Count line types from stdout. The bundle validator's per-bundle
-    # summary line begins with the bundle name (no `ok ` / `ok-prose ` /
-    # `not ok ` prefix), so we don't double-count it.
+    # Count line types from stdout using anchored TAP-style patterns.
+    # Summary lines (`<bundle>: K ok / F failed (...)`) and stage headers
+    # do not match these patterns and are correctly excluded.
     schema_ok = 0
     prose_ok = 0
     fail = 0
     for line in (proc.stdout or "").splitlines():
-        if line.startswith("ok-prose "):
+        if _PROSE_OK_RE.match(line):
             prose_ok += 1
-        elif line.startswith("ok "):
+        elif _SCHEMA_OK_RE.match(line):
             schema_ok += 1
-        elif line.startswith("not ok "):
+        elif _FAIL_RE.match(line):
             fail += 1
 
     # If a child exited non-zero but no `not ok` lines were captured
